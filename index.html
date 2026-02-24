@@ -17,7 +17,6 @@
             overflow: auto;
         }
 
-        /* Animasi Bintang Kelap-Kelip */
         .stars {
             position: absolute;
             top: 0;
@@ -25,7 +24,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            pointer-events: none; /* Menghindari interaksi dengan bintang */
+            pointer-events: none;
         }
 
         .star {
@@ -36,45 +35,17 @@
             opacity: 0.7;
         }
 
-        /* Animasi Kelap-Kelip */
         @keyframes twinkle {
             0% { opacity: 0.5; }
             50% { opacity: 1; }
             100% { opacity: 0.5; }
         }
 
-        /* Gerakan acak untuk bintang */
         @keyframes move {
             0% { transform: translateX(0) translateY(0); }
             50% { transform: translateX(10px) translateY(-10px); }
             100% { transform: translateX(-10px) translateY(10px); }
         }
-
-        /* Membuat banyak bintang acak */
-        .star:nth-child(1) { width: 3px; height: 3px; top: 10%; left: 10%; animation-duration: 1.3s, 10s; }
-        .star:nth-child(2) { width: 4px; height: 4px; top: 25%; left: 40%; animation-duration: 1.5s, 12s; }
-        .star:nth-child(3) { width: 2px; height: 2px; top: 15%; left: 60%; animation-duration: 1.6s, 15s; }
-        .star:nth-child(4) { width: 5px; height: 5px; top: 50%; left: 20%; animation-duration: 1.2s, 14s; }
-        .star:nth-child(5) { width: 3px; height: 3px; top: 40%; left: 70%; animation-duration: 1.4s, 11s; }
-        .star:nth-child(6) { width: 2px; height: 2px; top: 70%; left: 80%; animation-duration: 1.8s, 13s; }
-        .star:nth-child(7) { width: 4px; height: 4px; top: 80%; left: 90%; animation-duration: 1.1s, 16s; }
-        .star:nth-child(8) { width: 5px; height: 5px; top: 10%; left: 80%; animation-duration: 1.7s, 12s; }
-        .star:nth-child(9) { width: 3px; height: 3px; top: 60%; left: 50%; animation-duration: 1.4s, 14s; }
-        .star:nth-child(10) { width: 2px; height: 2px; top: 30%; left: 90%; animation-duration: 1.6s, 18s; }
-
-        /* Menambahkan lebih banyak bintang */
-        .star:nth-child(11) { width: 3px; height: 3px; top: 20%; left: 90%; animation-duration: 1.7s, 13s; }
-        .star:nth-child(12) { width: 2px; height: 2px; top: 40%; left: 60%; animation-duration: 1.2s, 11s; }
-        .star:nth-child(13) { width: 3px; height: 3px; top: 50%; left: 30%; animation-duration: 1.8s, 14s; }
-        .star:nth-child(14) { width: 5px; height: 5px; top: 30%; left: 80%; animation-duration: 1.4s, 16s; }
-        .star:nth-child(15) { width: 2px; height: 2px; top: 70%; left: 10%; animation-duration: 1.5s, 17s; }
-        .star:nth-child(16) { width: 4px; height: 4px; top: 80%; left: 30%; animation-duration: 1.3s, 12s; }
-        .star:nth-child(17) { width: 3px; height: 3px; top: 20%; left: 50%; animation-duration: 1.9s, 18s; }
-        .star:nth-child(18) { width: 3px; height: 3px; top: 80%; left: 70%; animation-duration: 1.6s, 14s; }
-        .star:nth-child(19) { width: 2px; height: 2px; top: 10%; left: 90%; animation-duration: 1.4s, 13s; }
-        .star:nth-child(20) { width: 5px; height: 5px; top: 60%; left: 10%; animation-duration: 1.7s, 15s; }
-
-        /* Tambahkan lebih banyak bintang sesuai keinginan */
 
         .profile img {
             width: 110px; height: 110px;
@@ -97,10 +68,9 @@
             border: none; color: white; font-weight: 500; font-size: 16px;
             width: 100%; cursor: pointer; transition: 0.3s ease;
             box-shadow: 0 5px 15px rgba(255, 79, 216, 0.4);
-            transform: translateY(0); /* Initial position */
         }
         .btn:hover {
-            transform: translateY(-5px); /* Sedikit naik saat dihover */
+            transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(255, 79, 216, 0.8);
         }
         .submenu { 
@@ -117,7 +87,7 @@
             display: flex; align-items: center; justify-content: center; gap: 10px;
             background: #1c1c1c; margin: 10px 0; padding: 12px; border-radius: 12px;
             text-decoration: none; color: #ffb3ff; transition: 0.3s;
-            transform: translateX(-10px); /* Initial position for the smooth slide */
+            transform: translateX(-10px);
         }
         .submenu a:hover {
             background: #2a002a; transform: translateX(5px);
@@ -133,7 +103,6 @@
 
 <!-- Efek bintang kelap-kelip -->
 <div class="stars">
-    <!-- Bintang -->
     <div class="star"></div>
     <div class="star"></div>
     <div class="star"></div>
@@ -144,18 +113,15 @@
     <div class="star"></div>
     <div class="star"></div>
     <div class="star"></div>
-    <!-- Tambahkan lebih banyak bintang di sini -->
 </div>
 
 <div class="profile">
-    <!-- Foto Profil -->
     <img src="https://i.ibb.co/tw1jcMBH/ai-repair-20260220002234645.jpg" alt="Profile">
     <h2>@ManzModz</h2>
-    <!-- Bio di bawah username -->
     <p class="bio">ManzModz Memberikan Mod Yang 100% Aman🎉</p>
 </div>
 
-<!-- Drama China (sebelumnya "All Drama") -->
+<!-- Drama China -->
 <button class="btn" onclick="toggleMenu('dramaChina')">Drama China</button>
 <div id="dramaChina" class="submenu">
     <a href="https://sfile.co/FHaZc9p4iE4" target="_blank">
@@ -170,9 +136,25 @@
         <img src="https://i.ibb.co/2YvHgjTq/20260223-174659.jpg" alt="FreeReels">
         FreeReels
     </a>
+    <a href="https://sfile.co/VQkwjPXuIXH" target="_blank">
+        <img src="https://i.ibb.co/NnfnfnBw/20260223-174606.jpg" alt="DramaNova">
+        DramaNova
+    </a>
+    <a href="https://sfile.co/bmHhhgbkgmc" target="_blank">
+        <img src="https://i.ibb.co/C57xpRcm/20260223-174747.webp" alt="RadReels">
+        RadReels
+    </a>
+    <a href="https://sfile.co/t2PYMeTyxuA" target="_blank">
+        <img src="https://i.ibb.co/mk0Xrgq/20260223-174801.jpg" alt="Melolo">
+        Melolo
+    </a>
+    <a href="https://sfile.co/oNHrUecMWvA" target="_blank">
+        <img src="https://i.ibb.co/Lzr4Ktjv/20260224-110757.jpg" alt="DrapaPops">
+        DrapaPops
+    </a>
 </div>
 
-<!-- Ai -->
+<!-- AI -->
 <button class="btn" onclick="toggleMenu('ai')">Ai</button>
 <div id="ai" class="submenu">
     <a href="https://sfile.co/7CZcYpGY957" target="_blank">
@@ -188,9 +170,9 @@
 <!-- Komik -->
 <button class="btn" onclick="toggleMenu('komik')">Komik</button>
 <div id="komik" class="submenu">
-    <a href="https://example.com/komik-link" target="_blank">
-        <img src="https://via.placeholder.com/32" alt="Komik App">
-        Komik App
+    <a href="https://sfile.co/c2kPVOc2Q2p" target="_blank">
+        <img src="https://i.ibb.co/mrcngZkF/20260223-174835.jpg" alt="KomikIndo">
+        KomikIndo
     </a>
 </div>
 
@@ -200,6 +182,14 @@
     <a href="https://sfile.co/3tFTiNAYgFm" target="_blank">
         <img src="https://i.ibb.co/vxDLdKb9/20260223-174528.jpg" alt="AnimeXNonton">
         AnimeXNonton
+    </a>
+    <a href="https://sfile.co/X5eMU5mk9tD" target="_blank">
+        <img src="https://i.ibb.co/FLr01LxG/20260223-174655.jpg" alt="Donghub">
+        Donghub
+    </a>
+    <a href="https://sfile.co/XkbTyFbzbsH" target="_blank">
+        <img src="https://i.ibb.co/0y39ZXXb/20260223-174829.jpg" alt="Anime Lovers">
+        Anime Lovers
     </a>
 </div>
 
@@ -213,6 +203,18 @@
     <a href="https://sfile.co/a3POWDp5XdM" target="_blank">
         <img src="https://i.ibb.co/fYjxmDxc/20260223-174713.jpg" alt="LokLok">
         LokLok
+    </a>
+    <a href="https://sfile.co/agspR4qClZh" target="_blank">
+        <img src="https://i.ibb.co/qFBksgfW/20260223-174752.png" alt="WeTv">
+        WeTv
+    </a>
+    <a href="https://sfile.co/pgrMyM4k22U" target="_blank">
+        <img src="https://i.ibb.co/ns2GmxRJ/20260223-234822.jpg" alt="MovieBox">
+        MovieBox
+    </a>
+    <a href="https://sfile.co/UkN1hkvSTKC" target="_blank">
+        <img src="https://i.ibb.co/yz1y1pm/20260223-234842.webp" alt="IMDb">
+        IMDb
     </a>
 </div>
 
@@ -244,6 +246,10 @@
         <img src="https://i.ibb.co/YF2cZCdL/20260223-174549.jpg" alt="Remini">
         Remini
     </a>
+    <a href="https://sfile.co/E0yKQ9Ph8z8" target="_blank">
+        <img src="https://i.ibb.co/6RrgfzQq/20260223-174706.jpg" alt="PiscArt">
+        PiscArt
+    </a>
 </div>
 
 <footer>
@@ -255,7 +261,6 @@ function toggleMenu(id) {
     var current = document.getElementById(id);
     current.classList.toggle('open'); // Menambahkan atau menghapus class 'open'
 
-    // Menutup submenu lain saat membuka submenu baru
     var menus = document.querySelectorAll(".submenu");
     menus.forEach(function(menu) {
         if (menu.id !== id) { menu.classList.remove('open'); }
