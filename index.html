@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manz Premium Links</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body {
+            background: #0f0f0f;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            min-height: 100vh;
+            position: relative;
+            overflow: auto;
+        }
+
+        /* Animasi Bintang Kelap-Kelip */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none; /* Menghindari interaksi dengan bintang */
+        }
+
+        .star {
+            position: absolute;
+            background-color: white;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: twinkle 1.5s infinite ease-in-out, move 10s linear infinite;
+            opacity: 0.7;
+        }
+
+        /* Animasi Kelap-Kelip */
+        @keyframes twinkle {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        /* Gerakan acak untuk bintang */
+        @keyframes move {
+            0% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(10px) translateY(-10px); }
+            100% { transform: translateX(-10px) translateY(10px); }
+        }
+
+        /* Membuat banyak bintang acak */
+        .star:nth-child(1) { width: 3px; height: 3px; top: 10%; left: 10%; animation-duration: 1.3s, 10s; }
+        .star:nth-child(2) { width: 4px; height: 4px; top: 25%; left: 40%; animation-duration: 1.5s, 12s; }
+        .star:nth-child(3) { width: 2px; height: 2px; top: 15%; left: 60%; animation-duration: 1.6s, 15s; }
+        .star:nth-child(4) { width: 5px; height: 5px; top: 50%; left: 20%; animation-duration: 1.2s, 14s; }
+        .star:nth-child(5) { width: 3px; height: 3px; top: 40%; left: 70%; animation-duration: 1.4s, 11s; }
+        .star:nth-child(6) { width: 2px; height: 2px; top: 70%; left: 80%; animation-duration: 1.8s, 13s; }
+        .star:nth-child(7) { width: 4px; height: 4px; top: 80%; left: 90%; animation-duration: 1.1s, 16s; }
+        .star:nth-child(8) { width: 5px; height: 5px; top: 10%; left: 80%; animation-duration: 1.7s, 12s; }
+        .star:nth-child(9) { width: 3px; height: 3px; top: 60%; left: 50%; animation-duration: 1.4s, 14s; }
+        .star:nth-child(10) { width: 2px; height: 2px; top: 30%; left: 90%; animation-duration: 1.6s, 18s; }
+
+        /* Menambahkan lebih banyak bintang */
+        .star:nth-child(11) { width: 3px; height: 3px; top: 20%; left: 90%; animation-duration: 1.7s, 13s; }
+        .star:nth-child(12) { width: 2px; height: 2px; top: 40%; left: 60%; animation-duration: 1.2s, 11s; }
+        .star:nth-child(13) { width: 3px; height: 3px; top: 50%; left: 30%; animation-duration: 1.8s, 14s; }
+        .star:nth-child(14) { width: 5px; height: 5px; top: 30%; left: 80%; animation-duration: 1.4s, 16s; }
+        .star:nth-child(15) { width: 2px; height: 2px; top: 70%; left: 10%; animation-duration: 1.5s, 17s; }
+        .star:nth-child(16) { width: 4px; height: 4px; top: 80%; left: 30%; animation-duration: 1.3s, 12s; }
+        .star:nth-child(17) { width: 3px; height: 3px; top: 20%; left: 50%; animation-duration: 1.9s, 18s; }
+        .star:nth-child(18) { width: 3px; height: 3px; top: 80%; left: 70%; animation-duration: 1.6s, 14s; }
+        .star:nth-child(19) { width: 2px; height: 2px; top: 10%; left: 90%; animation-duration: 1.4s, 13s; }
+        .star:nth-child(20) { width: 5px; height: 5px; top: 60%; left: 10%; animation-duration: 1.7s, 15s; }
+
+        /* Tambahkan lebih banyak bintang sesuai keinginan */
+
+        .profile img {
+            width: 110px; height: 110px;
+            border-radius: 50%; border: 3px solid #ff4fd8;
+            box-shadow: 0 0 25px #ff4fd8;
+        }
+        .profile h2 {
+            margin-top: 15px;
+            font-weight: 600;
+            color: #ff9efc;
+        }
+        .bio {
+            font-size: 16px;
+            color: #ffb3ff;
+            margin-top: 10px;
+        }
+        .btn {
+            background: linear-gradient(45deg, #ff4fd8, #9d4dff);
+            padding: 15px; margin: 15px 0; border-radius: 15px;
+            border: none; color: white; font-weight: 500; font-size: 16px;
+            width: 100%; cursor: pointer; transition: 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 79, 216, 0.4);
+            transform: translateY(0); /* Initial position */
+        }
+        .btn:hover {
+            transform: translateY(-5px); /* Sedikit naik saat dihover */
+            box-shadow: 0 8px 25px rgba(255, 79, 216, 0.8);
+        }
+        .submenu { 
+            max-height: 0; 
+            overflow: hidden; 
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease;
+            opacity: 0;
+        }
+        .submenu.open { 
+            max-height: 1000px; 
+            opacity: 1; 
+        }
+        .submenu a {
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            background: #1c1c1c; margin: 10px 0; padding: 12px; border-radius: 12px;
+            text-decoration: none; color: #ffb3ff; transition: 0.3s;
+            transform: translateX(-10px); /* Initial position for the smooth slide */
+        }
+        .submenu a:hover {
+            background: #2a002a; transform: translateX(5px);
+        }
+        .submenu img {
+            width: 32px; height: 32px; border-radius: 6px;
+        }
+
+        footer { margin-top: 40px; font-size: 13px; color: #777; }
+    </style>
+</head>
+<body>
+
+<!-- Efek bintang kelap-kelip -->
+<div class="stars">
+    <!-- Bintang -->
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <!-- Tambahkan lebih banyak bintang di sini -->
+</div>
+
+<div class="profile">
+    <!-- Foto Profil -->
+    <img src="https://i.ibb.co/tw1jcMBH/ai-repair-20260220002234645.jpg" alt="Profile">
+    <h2>@ManzModz</h2>
+    <!-- Bio di bawah username -->
+    <p class="bio">ManzModz Memberikan Mod Yang 100% Aman🎉</p>
+</div>
+
+<!-- Drama China (sebelumnya "All Drama") -->
+<button class="btn" onclick="toggleMenu('dramaChina')">Drama China</button>
+<div id="dramaChina" class="submenu">
+    <a href="https://sfile.co/FHaZc9p4iE4" target="_blank">
+        <img src="https://i.ibb.co/skJDGBq/20260223-014332.png" alt="NetShort">
+        NetShort
+    </a>
+    <a href="https://sfile.co/tadeThvqBZz" target="_blank">
+        <img src="https://i.ibb.co/rR9J5Dj6/20260223-143415.jpg" alt="Reelshort">
+        Reelshort
+    </a>
+    <a href="https://sfile.co/reuIzo4gcal" target="_blank">
+        <img src="https://i.ibb.co/2YvHgjTq/20260223-174659.jpg" alt="FreeReels">
+        FreeReels
+    </a>
+</div>
+
+<!-- Ai -->
+<button class="btn" onclick="toggleMenu('ai')">Ai</button>
+<div id="ai" class="submenu">
+    <a href="https://sfile.co/7CZcYpGY957" target="_blank">
+        <img src="https://i.ibb.co/0R7ycrwT/20260223-143403.jpg" alt="ChatGPT Clone">
+        ChatGPT Clone
+    </a>
+    <a href="https://sfile.co/7qdyrcQGdTQ" target="_blank">
+        <img src="https://i.ibb.co/gLjTzwqW/20260223-143428.jpg" alt="Grok AI">
+        Grok AI
+    </a>
+</div>
+
+<!-- Komik -->
+<button class="btn" onclick="toggleMenu('komik')">Komik</button>
+<div id="komik" class="submenu">
+    <a href="https://example.com/komik-link" target="_blank">
+        <img src="https://via.placeholder.com/32" alt="Komik App">
+        Komik App
+    </a>
+</div>
+
+<!-- Steaming Anime -->
+<button class="btn" onclick="toggleMenu('streamingAnime')">Steaming Anime</button>
+<div id="streamingAnime" class="submenu">
+    <a href="https://sfile.co/3tFTiNAYgFm" target="_blank">
+        <img src="https://i.ibb.co/vxDLdKb9/20260223-174528.jpg" alt="AnimeXNonton">
+        AnimeXNonton
+    </a>
+</div>
+
+<!-- Steaming Drama -->
+<button class="btn" onclick="toggleMenu('streamingDrama')">Steaming Drama</button>
+<div id="streamingDrama" class="submenu">
+    <a href="https://sfile.co/sqxwWnXUDG0" target="_blank">
+        <img src="https://i.ibb.co/DHxcypvj/20260223-174735.webp" alt="LokTv">
+        LokTv
+    </a>
+    <a href="https://sfile.co/a3POWDp5XdM" target="_blank">
+        <img src="https://i.ibb.co/fYjxmDxc/20260223-174713.jpg" alt="LokLok">
+        LokLok
+    </a>
+</div>
+
+<!-- Steaming Music -->
+<button class="btn" onclick="toggleMenu('streamingMusic')">Steaming Music</button>
+<div id="streamingMusic" class="submenu">
+    <a href="https://sfile.co/Sh36lOPqa2i" target="_blank">
+        <img src="https://i.ibb.co/Zp6WwVMC/20260223-174518.jpg" alt="Spotify">
+        Spotify
+    </a>
+</div>
+
+<!-- Editing -->
+<button class="btn" onclick="toggleMenu('editing')">Editing</button>
+<div id="editing" class="submenu">
+    <a href="https://www.mediafire.com/file/6636f0rfqyuanv4/CapVCut_16.9.0_PR3MIUM.apk/file" target="_blank">
+        <img src="https://i.ibb.co/YF9vc86g/20260223-143503.jpg" alt="CapCut">
+        CapCut
+    </a>
+    <a href="https://sfile.co/xU48q9pbz1L" target="_blank">
+        <img src="https://i.ibb.co/qLSdDvqk/20260223-143713.jpg" alt="Alight Motion">
+        Alight Motion
+    </a>
+    <a href="https://sfile.co/QvYrywlxpNe" target="_blank">
+        <img src="https://i.ibb.co/Dg8D07nN/20260223-143409.jpg" alt="Wink">
+        Wink
+    </a>
+    <a href="https://sfile.co/VnDC2Zn9kF7" target="_blank">
+        <img src="https://i.ibb.co/YF2cZCdL/20260223-174549.jpg" alt="Remini">
+        Remini
+    </a>
+</div>
+
+<footer>
+    © 2026 Manz Premium Link
+</footer>
+
+<script>
+function toggleMenu(id) {
+    var current = document.getElementById(id);
+    current.classList.toggle('open'); // Menambahkan atau menghapus class 'open'
+
+    // Menutup submenu lain saat membuka submenu baru
+    var menus = document.querySelectorAll(".submenu");
+    menus.forEach(function(menu) {
+        if (menu.id !== id) { menu.classList.remove('open'); }
+    });
+}
+</script>
+
+</body>
+</html>
