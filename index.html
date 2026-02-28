@@ -6,6 +6,8 @@
     <title>ManzModz - Koleksi APK Mod Terlengkap</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Adsense – ganti dengan kode asli -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         body { background: #0f0f0f; color: #e0e0e0; }
@@ -37,6 +39,8 @@
             background: #ff4fd8; border: none; color: white; padding: 0 25px;
             border-radius: 40px; cursor: pointer; font-weight: 500;
         }
+        .header-stats { color: #888; font-size: 0.9rem; }
+
         .main-container { max-width: 1400px; margin: 30px auto; padding: 0 20px; display: flex; gap: 30px; }
 
         /* Sidebar Kategori */
@@ -101,6 +105,16 @@
         .app-version { background: #252525; padding: 4px 12px; border-radius: 20px; color: #ccc; }
         .app-download { color: #ff4fd8; font-weight: 600; }
 
+        /* AdSense style */
+        .adsense-container {
+            margin: 30px 0;
+            padding: 20px;
+            background: #1a1a1a;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px dashed #ff4fd8;
+        }
+
         .footer {
             background: #0a0a0a; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #333;
         }
@@ -139,9 +153,20 @@
                 <button id="searchButton"><i class="fas fa-search"></i></button>
             </div>
             <div class="header-stats">
-                <i class="fas fa-box"></i> <span id="totalApps">45</span> APK
+                <i class="fas fa-box"></i> <span id="totalApps">55</span> APK
             </div>
         </div>
+    </div>
+
+    <!-- AdSense Header -->
+    <div class="adsense-container">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
     <div class="main-container">
@@ -150,13 +175,32 @@
             <div class="kategori-box">
                 <h3><i class="fas fa-filter"></i> Kategori</h3>
                 <ul class="kategori-list" id="kategoriList"></ul>
+                <!-- AdSense Sidebar -->
+                <div style="margin-top:20px;">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="YYYYYYYYYY"
+                         data-ad-format="rectangle"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </div>
             </div>
         </div>
 
         <!-- Konten Utama -->
         <div class="content">
-            <h2 class="section-title" id="allAppsTitle">Semua Aplikasi (45)</h2>
+            <h2 class="section-title" id="allAppsTitle">Semua Aplikasi (55)</h2>
             <div class="apps-grid" id="appsGrid"></div>
+
+            <!-- AdSense Footer -->
+            <div class="adsense-container">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                     data-ad-slot="ZZZZZZZZZZ"
+                     data-ad-format="auto"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
         </div>
     </div>
 
@@ -187,10 +231,9 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // ==================== DATA APLIKASI (45 APK) ====================
+            // ==================== DATA APLIKASI (55 APK) ====================
             const apps = [
                 // --- APLIKASI LAMA (34) ---
-                // Drama China (10)
                 { name: "NetShort", kategori: "Drama China", icon: "https://i.ibb.co/skJDGBq/20260223-014332.png", desc: "Streaming drama China subtitle Indonesia", link: "https://manzmodz.blogspot.com/2026/02/netshort.html", version: "2.1.5" },
                 { name: "Reelshort", kategori: "Drama China", icon: "https://i.ibb.co/rR9J5Dj6/20260223-143415.jpg", desc: "Drama pendek China populer", link: "https://manzmodz.blogspot.com/2026/02/reelshort.html", version: "2.3.0" },
                 { name: "FreeReels", kategori: "Drama China", icon: "https://i.ibb.co/2YvHgjTq/20260223-174659.jpg", desc: "Nonton drama China gratis", link: "https://manzmodz.blogspot.com/2026/02/freereels.html", version: "2.1.3" },
@@ -207,7 +250,7 @@
                 // Komik (1)
                 { name: "KomikIndo", kategori: "Komik", icon: "https://i.ibb.co/mrcngZkF/20260223-174835.jpg", desc: "Baca komik online", link: "https://manzmodz.blogspot.com/2026/02/komikindo.html", version: "3.2.1" },
                 // Anime (4)
-                { name: "AnimeXNonton", kategori: "Anime", icon: "https://i.ibb.co/vxDLdKb9/20260223-174528.jpg", desc: "Streaming anime sub Indo", link: "https://manzmodz.blogspot.com/2026/02/animexnonton.html", version: "5.1.3" },
+                { name: "AnimeXNonton", kategori: "Anime", icon: "https://i.ibb.co.com/vxDLdKb9/20260223-174528.jpg", desc: "Streaming anime sub Indo", link: "https://manzmodz.blogspot.com/2026/02/animexnonton.html", version: "5.1.3" },
                 { name: "Donghub", kategori: "Anime", icon: "https://i.ibb.co/FLr01LxG/20260223-174655.jpg", desc: "Nonton anime", link: "https://manzmodz.blogspot.com/2026/02/donghub.html", version: "2.4.8" },
                 { name: "Anime Lovers", kategori: "Anime", icon: "https://i.ibb.co/0y39ZXXb/20260223-174829.jpg", desc: "Koleksi anime", link: "https://manzmodz.blogspot.com/2026/02/animelovers.html", version: "3.1.6" },
                 { name: "ANIMEKU", kategori: "Anime", icon: "https://i.ibb.co/G4jshqz8/icon.png", desc: "Nonton anime gratis", link: "https://manzmodz.blogspot.com/2026/02/animeku.html", version: "3.7.2" },
@@ -221,7 +264,7 @@
                 { name: "Spotify", kategori: "Music", icon: "https://i.ibb.co/Zp6WwVMC/20260223-174518.jpg", desc: "Musik premium", link: "https://manzmodz.blogspot.com/2026/02/spotify.html", version: "8.8.96" },
                 // Video (1)
                 { name: "YouTube", kategori: "Video", icon: "https://i.ibb.co/3Ypw0dC9/20260225-111542.jpg", desc: "YouTube Premium", link: "https://manzmodz.blogspot.com/2026/02/youtube.html", version: "19.16.39" },
-                // Editing (9) - termasuk Lightroom dan PiscArt yang sudah diupdate
+                // Editing (10)
                 { name: "CapCut", kategori: "Editing", icon: "https://i.ibb.co/YF9vc86g/20260223-143503.jpg", desc: "Edit video", link: "https://manzmodz.blogspot.com/2026/02/capcut.html", version: "16.9.0" },
                 { name: "Alight Motion", kategori: "Editing", icon: "https://i.ibb.co/qLSdDvqk/20260223-143713.jpg", desc: "Motion graphic", link: "https://manzmodz.blogspot.com/2026/02/alight-motion.html", version: "5.0.7" },
                 { name: "Wink", kategori: "Editing", icon: "https://i.ibb.co/Dg8D07nN/20260223-143409.jpg", desc: "Edit foto", link: "https://manzmodz.blogspot.com/2026/02/wink.html", version: "4.3.5" },
@@ -231,25 +274,23 @@
                 { name: "NodeVideo", kategori: "Editing", icon: "https://i.ibb.co/nMsd26cJ/a5b3d0acc507df65853df2017a51c4af82a6e3851ca7f0e6e5c4843c18580f6c-200.jpg", desc: "Edit video", link: "https://manzmodz.blogspot.com/2026/02/nodevideo.html", version: "3.2.7" },
                 { name: "Wink China", kategori: "Editing", icon: "https://i.ibb.co/Mx8n1W5d/20260227-114226.jpg", desc: "Edit foto versi China", link: "https://manzmodz.blogspot.com/2026/02/wink-chinese.html", version: "2.5.3" },
                 { name: "Pixellab", kategori: "Editing", icon: "https://i.ibb.co/6KQrYvC/20260227-114446.jpg", desc: "Desain grafis", link: "https://manzmodz.blogspot.com/2026/02/pixellab.html", version: "2.1.9" },
+                { name: "Winkit", kategori: "Editing", icon: "https://i.ibb.co.com/2YYC4Dqj/b15a08214ff89c0c7ef5f78f8fc6057f91ae68e65428114e7f0444571875a6fd-200.jpg", desc: "Edit foto dengan AI", link: "https://manzmodz.blogspot.com/2026/02/winkit.html", version: "2.3.1" },
                 // VPN (1)
                 { name: "Vpn Super Proxy", kategori: "VPN", icon: "https://i.ibb.co/4wHQT7Qw/10db31b65c8d09ac1d719e49ee891ce8db3179283858330aefcc22c291657b43-200.jpg", desc: "VPN gratis", link: "https://manzmodz.blogspot.com/2026/02/vpn-super-proxy.html", version: "2.8.1" },
-
-                // --- APLIKASI BARU (11) ---
-                { name: "Cloudplay", kategori: "Game", icon: "https://i.ibb.co.com/fYSQKpcJ/20260228-090331.jpg", desc: "Layanan cloud gaming untuk memainkan game berat di HP kentang.", link: "https://manzmodz.blogspot.com/2026/02/cloudplay.html", version: "1.5.2" },
-                { name: "Micro Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/7xP4xKh7/101bb1e21cd8c8d1a956170721ea6af3bd685431bbb4d94ab0f79ddfb0fc4650-200.jpg", desc: "Streaming drama pendek China.", link: "https://manzmodz.blogspot.com/2026/02/microdrama.html", version: "1.8.4" },
-                { name: "Minute Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/NgSr9Dcq/ec5abc7beb669e29e63d1fd6b6283b8ad95da7666d06f64327bef6017c889ebe-200.jpg", desc: "Nonton drama China singkat durasi 1-5 menit.", link: "https://manzmodz.blogspot.com/2026/02/minute-drama.html", version: "2.1.0" },
-                { name: "Muslim Pro", kategori: "Islami", icon: "https://i.ibb.co.com/7tYSshd3/f6d7c304820247fcfd25be1278e72c564e3f2aa8dad8b8f12259ff70b78c3621-200.jpg", desc: "Aplikasi Islami dengan jadwal sholat, Al-Qur'an, arah kiblat.", link: "https://manzmodz.blogspot.com/2026/02/muslim-pro.html", version: "12.5.1" },
-                { name: "One Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/B52HZNY9/47069b55de3c660ca7c37433d9c72e789b64619917952c6f8f16ccfc23ef4374-200.jpg", desc: "Platform streaming drama China.", link: "https://manzmodz.blogspot.com/2026/02/one-drama.html", version: "3.4.2" },
-                { name: "RapidTV", kategori: "Streaming", icon: "https://i.ibb.co.com/Z1RvMFrg/064e615cfa3fa636834972d895cc5f7510e06a838c72541957743dbe3fba0187-200.jpg", desc: "Streaming TV lokal dan internasional gratis.", link: "https://manzmodz.blogspot.com/2026/02/rapidtv.html", version: "4.1.7" },
-                { name: "Soda Reels", kategori: "Drama", icon: "https://i.ibb.co.com/23nKbHrn/706cec7a3f1496fb30903bf0d445a2d402ca394e7caabe0950ddf47061363379-200.jpg", desc: "Aplikasi drama pendek berbagai genre.", link: "https://manzmodz.blogspot.com/2026/02/sodareels.html", version: "2.5.3" },
-                { name: "We Muslim", kategori: "Islami", icon: "https://i.ibb.co.com/0j9gtW4c/6d514ea348745c247231b2de31893db77d2f6f72fce0bd05e12a2a44483eb1f3-200.jpg", desc: "Aplikasi Islami dengan jadwal sholat dan doa harian.", link: "https://manzmodz.blogspot.com/2026/02/wemuslim.html", version: "5.2.3" },
-                { name: "Winkit", kategori: "Editing", icon: "https://i.ibb.co.com/2YYC4Dqj/b15a08214ff89c0c7ef5f78f8fc6057f91ae68e65428114e7f0444571875a6fd-200.jpg", desc: "Edit foto dengan fitur AI, mirip Wink lebih ringan.", link: "https://manzmodz.blogspot.com/2026/02/winkit.html", version: "2.3.1" }
+                // Game (1)
+                { name: "Cloudplay", kategori: "Game", icon: "https://i.ibb.co.com/fYSQKpcJ/20260228-090331.jpg", desc: "Cloud gaming", link: "https://manzmodz.blogspot.com/2026/02/cloudplay.html", version: "1.5.2" },
+                // Islami (2)
+                { name: "Muslim Pro", kategori: "Islami", icon: "https://i.ibb.co.com/7tYSshd3/f6d7c304820247fcfd25be1278e72c564e3f2aa8dad8b8f12259ff70b78c3621-200.jpg", desc: "Jadwal sholat, Al-Qur'an", link: "https://manzmodz.blogspot.com/2026/02/muslim-pro.html", version: "12.5.1" },
+                { name: "We Muslim", kategori: "Islami", icon: "https://i.ibb.co.com/0j9gtW4c/6d514ea348745c247231b2de31893db77d2f6f72fce0bd05e12a2a44483eb1f3-200.jpg", desc: "Doa harian, komunitas", link: "https://manzmodz.blogspot.com/2026/02/wemuslim.html", version: "5.2.3" },
+                // APLIKASI BARU (5)
+                { name: "Crazy Popcorn", kategori: "Hiburan", icon: "https://i.ibb.co.com/Pv0fQ9d4/icon.png", desc: "Aplikasi hiburan dengan konten lucu dan seru", link: "https://manzmodz.blogspot.com/2026/02/crazy-popcorn.html", version: "1.0" },
+                { name: "My Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/5gYmTpmQ/89e27e64a9bb9cc2b86bce546c23ff7b5953e020015faffc398f51e189009db5-200.jpg", desc: "Platform drama China dengan koleksi lengkap", link: "https://manzmodz.blogspot.com/2026/02/my-drama.html", version: "1.57.0" },
+                { name: "Cool Scene Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/JWnKP7rn/f58f7d1a7bd003407536a1514c07dea7-icon.png", desc: "Koleksi drama China dengan scene keren", link: "https://manzmodz.blogspot.com/2026/02/cool-scene-drama.html", version: "1.0" },
+                { name: "ShortSky", kategori: "Drama China", icon: "https://i.ibb.co.com/GfbM9D3c/4bb6236b9881094eb1840a380e8bb42933914cca802207a9cefae481d114fade-200.jpg", desc: "Drama pendek China dengan cerita seru", link: "https://manzmodz.blogspot.com/2026/02/shortsky.html", version: "1.3.1" },
+                { name: "Nonton Anime", kategori: "Anime", icon: "https://i.ibb.co.com/vxDLdKb9/20260223-174528.jpg", desc: "Streaming anime subtitle Indonesia", link: "https://manzmodz.blogspot.com/2026/02/nonton-anime.html", version: "1.0" }
             ];
 
-            // Debug: cek jumlah apps di console
-            console.log('Total apps:', apps.length);
-
-            // Update total apps di header
+            // Update total apps
             document.getElementById('totalApps').textContent = apps.length;
 
             // Hitung jumlah per kategori
@@ -345,7 +386,7 @@
                 return card;
             }
 
-            // Filter berdasarkan kategori dan search
+            // Filter berdasarkan kategori dan search, diurutkan A-Z
             let currentKategori = null;
             let currentSearch = '';
 
@@ -359,7 +400,7 @@
                         app.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
                         app.kategori.toLowerCase().includes(searchTerm.toLowerCase());
                     return matchKategori && matchSearch;
-                });
+                }).sort((a, b) => a.name.localeCompare(b.name));
 
                 document.getElementById('allAppsTitle').textContent = 
                     searchTerm ? `Hasil Pencarian: "${searchTerm}" (${filtered.length})` :
