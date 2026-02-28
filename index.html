@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ManzModz - Semua Aplikasi</title>
+    <title>ManzModz - Koleksi APK Mod Terlengkap</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -37,32 +37,43 @@
             background: #ff4fd8; border: none; color: white; padding: 0 25px;
             border-radius: 40px; cursor: pointer; font-weight: 500;
         }
-        .main-container { max-width: 1400px; margin: 30px auto; padding: 0 20px; }
+        .main-container { max-width: 1400px; margin: 30px auto; padding: 0 20px; display: flex; gap: 30px; }
 
-        /* Filter kategori */
-        .filter-section { margin-bottom: 30px; }
-        .filter-title { font-size: 1.2rem; margin-bottom: 15px; color: #ff9efc; }
-        .kategori-buttons {
-            display: flex; flex-wrap: wrap; gap: 10px;
+        /* Sidebar Kategori */
+        .sidebar { width: 260px; flex-shrink: 0; }
+        .kategori-box {
+            background: #1a1a1a; border-radius: 20px; padding: 20px; border: 1px solid #333;
+            position: sticky; top: 20px;
         }
-        .kategori-btn {
-            background: #1a1a1a; border: 1px solid #333; color: #aaa;
-            padding: 8px 18px; border-radius: 30px; cursor: pointer;
-            transition: 0.3s; font-size: 0.95rem;
+        .kategori-box h3 {
+            color: #ff9efc; margin-bottom: 20px; font-size: 1.2rem;
+            display: flex; align-items: center; gap: 10px;
         }
-        .kategori-btn:hover, .kategori-btn.active {
-            background: #ff4fd8; color: white; border-color: #ff4fd8;
+        .kategori-list { list-style: none; }
+        .kategori-item { margin-bottom: 10px; }
+        .kategori-link {
+            color: #aaa; text-decoration: none; display: flex; align-items: center; gap: 12px;
+            padding: 10px 15px; border-radius: 12px; transition: 0.3s; font-size: 0.95rem;
+            cursor: pointer; border: none; background: none; width: 100%; text-align: left;
         }
-        .kategori-btn .count {
-            background: #333; color: #ccc; padding: 2px 8px; border-radius: 20px;
-            margin-left: 8px; font-size: 0.8rem;
+        .kategori-link i { width: 20px; color: #ff4fd8; }
+        .kategori-link:hover { background: #252525; color: white; transform: translateX(5px); }
+        .kategori-link.active { background: #ff4fd8; color: white; }
+        .kategori-link.active i { color: white; }
+        .kategori-count {
+            margin-left: auto; background: #333; padding: 2px 8px;
+            border-radius: 20px; font-size: 0.8rem; color: #ccc;
         }
-        .kategori-btn.active .count { background: white; color: #ff4fd8; }
 
-        /* Grid aplikasi */
+        /* Konten Utama */
+        .content { flex: 1; }
+        .section-title {
+            font-size: 1.5rem; font-weight: 600; margin-bottom: 20px; color: white;
+            border-left: 5px solid #ff4fd8; padding-left: 15px;
+        }
         .apps-grid {
             display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 25px;
+            gap: 25px; margin-bottom: 40px;
         }
         .app-card {
             background: #1a1a1a; border-radius: 20px; padding: 20px; border: 1px solid #333;
@@ -91,10 +102,29 @@
         .app-download { color: #ff4fd8; font-weight: 600; }
 
         .footer {
-            background: #0a0a0a; padding: 30px 20px; margin-top: 60px;
-            border-top: 1px solid #333; text-align: center;
+            background: #0a0a0a; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #333;
         }
-        .footer a { color: #ff9efc; text-decoration: none; }
+        .footer-container {
+            max-width: 1400px; margin: 0 auto; display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;
+        }
+        .footer-col h4 { color: #ff9efc; margin-bottom: 20px; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a { color: #aaa; text-decoration: none; transition: 0.3s; cursor: pointer; }
+        .footer-col a:hover { color: #ff4fd8; }
+        .footer-bottom {
+            text-align: center; color: #666; padding-top: 30px;
+            margin-top: 30px; border-top: 1px solid #333;
+        }
+
+        @media (max-width: 900px) {
+            .main-container { flex-direction: column; }
+            .sidebar { width: 100%; }
+            .kategori-box { position: static; }
+            .kategori-list { display: flex; flex-wrap: wrap; gap: 10px; }
+            .kategori-item { width: auto; }
+        }
     </style>
 </head>
 <body>
@@ -109,32 +139,57 @@
                 <button id="searchButton"><i class="fas fa-search"></i></button>
             </div>
             <div class="header-stats">
-                <i class="fas fa-box"></i> <span id="totalApps">34</span> APK
+                <i class="fas fa-box"></i> <span id="totalApps">45</span> APK
             </div>
         </div>
     </div>
 
     <div class="main-container">
-        <!-- Filter Kategori -->
-        <div class="filter-section">
-            <div class="filter-title"><i class="fas fa-filter"></i> Filter Kategori</div>
-            <div class="kategori-buttons" id="kategoriButtons">
-                <!-- akan diisi oleh JavaScript -->
+        <!-- Sidebar Kategori -->
+        <div class="sidebar">
+            <div class="kategori-box">
+                <h3><i class="fas fa-filter"></i> Kategori</h3>
+                <ul class="kategori-list" id="kategoriList"></ul>
             </div>
         </div>
 
-        <!-- Grid Semua Aplikasi -->
-        <div class="apps-grid" id="appsGrid"></div>
+        <!-- Konten Utama -->
+        <div class="content">
+            <h2 class="section-title" id="allAppsTitle">Semua Aplikasi (45)</h2>
+            <div class="apps-grid" id="appsGrid"></div>
+        </div>
     </div>
 
     <div class="footer">
-        <p>© 2026 ManzModz. Developed by Manz × Mayimi MODS | <a href="https://t.me/AllApkModzMxM" target="_blank">Telegram</a></p>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>ManzModz</h4>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Kategori</h4>
+                <ul id="footerKategori"></ul>
+            </div>
+            <div class="footer-col">
+                <h4>Kontak</h4>
+                <ul>
+                    <li><a href="https://t.me/AllApkModzMxM" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 ManzModz. Developed by Manz × Mayimi MODS
+        </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Data aplikasi (34 aplikasi)
+            // ==================== DATA APLIKASI (45 APK) ====================
             const apps = [
+                // --- APLIKASI LAMA (34) ---
                 // Drama China (10)
                 { name: "NetShort", kategori: "Drama China", icon: "https://i.ibb.co/skJDGBq/20260223-014332.png", desc: "Streaming drama China subtitle Indonesia", link: "https://manzmodz.blogspot.com/2026/02/netshort.html", version: "2.1.5" },
                 { name: "Reelshort", kategori: "Drama China", icon: "https://i.ibb.co/rR9J5Dj6/20260223-143415.jpg", desc: "Drama pendek China populer", link: "https://manzmodz.blogspot.com/2026/02/reelshort.html", version: "2.3.0" },
@@ -166,19 +221,36 @@
                 { name: "Spotify", kategori: "Music", icon: "https://i.ibb.co/Zp6WwVMC/20260223-174518.jpg", desc: "Musik premium", link: "https://manzmodz.blogspot.com/2026/02/spotify.html", version: "8.8.96" },
                 // Video (1)
                 { name: "YouTube", kategori: "Video", icon: "https://i.ibb.co/3Ypw0dC9/20260225-111542.jpg", desc: "YouTube Premium", link: "https://manzmodz.blogspot.com/2026/02/youtube.html", version: "19.16.39" },
-                // Editing (9)
+                // Editing (9) - termasuk Lightroom dan PiscArt yang sudah diupdate
                 { name: "CapCut", kategori: "Editing", icon: "https://i.ibb.co/YF9vc86g/20260223-143503.jpg", desc: "Edit video", link: "https://manzmodz.blogspot.com/2026/02/capcut.html", version: "16.9.0" },
                 { name: "Alight Motion", kategori: "Editing", icon: "https://i.ibb.co/qLSdDvqk/20260223-143713.jpg", desc: "Motion graphic", link: "https://manzmodz.blogspot.com/2026/02/alight-motion.html", version: "5.0.7" },
                 { name: "Wink", kategori: "Editing", icon: "https://i.ibb.co/Dg8D07nN/20260223-143409.jpg", desc: "Edit foto", link: "https://manzmodz.blogspot.com/2026/02/wink.html", version: "4.3.5" },
                 { name: "Remini", kategori: "Editing", icon: "https://i.ibb.co/YF2cZCdL/20260223-174549.jpg", desc: "Perbaiki kualitas foto", link: "https://manzmodz.blogspot.com/2026/02/remini.html", version: "3.7.2" },
-                { name: "PiscArt", kategori: "Editing", icon: "https://i.ibb.co/6RrgfzQq/20260223-174706.jpg", desc: "Edit foto & kolase", link: "https://manzmodz.blogspot.com/2026/02/piscart.html", version: "2.8.3" },
-                { name: "Lightroom", kategori: "Editing", icon: "https://i.ibb.co/1tLnR7dT/bddd61f3f382b9c2adbc5a293cc4647664b906368df15dd7cc5ea754da229e1b-200.jpg", desc: "Edit foto profesional", link: "https://manzmodz.blogspot.com/2026/02/lightroom.html", version: "8.4.1" },
+                { name: "PiscArt", kategori: "Editing", icon: "https://i.ibb.co/6RrgfzQq/20260223-174706.jpg", desc: "Edit foto & kolase", link: "https://manzmodz.blogspot.com/2026/02/piscart.html", version: "2.9.1" },
+                { name: "Lightroom", kategori: "Editing", icon: "https://i.ibb.co/1tLnR7dT/bddd61f3f382b9c2adbc5a293cc4647664b906368df15dd7cc5ea754da229e1b-200.jpg", desc: "Edit foto profesional", link: "https://manzmodz.blogspot.com/2026/02/lightroom.html", version: "8.5.0" },
                 { name: "NodeVideo", kategori: "Editing", icon: "https://i.ibb.co/nMsd26cJ/a5b3d0acc507df65853df2017a51c4af82a6e3851ca7f0e6e5c4843c18580f6c-200.jpg", desc: "Edit video", link: "https://manzmodz.blogspot.com/2026/02/nodevideo.html", version: "3.2.7" },
                 { name: "Wink China", kategori: "Editing", icon: "https://i.ibb.co/Mx8n1W5d/20260227-114226.jpg", desc: "Edit foto versi China", link: "https://manzmodz.blogspot.com/2026/02/wink-chinese.html", version: "2.5.3" },
                 { name: "Pixellab", kategori: "Editing", icon: "https://i.ibb.co/6KQrYvC/20260227-114446.jpg", desc: "Desain grafis", link: "https://manzmodz.blogspot.com/2026/02/pixellab.html", version: "2.1.9" },
                 // VPN (1)
-                { name: "Vpn Super Proxy", kategori: "VPN", icon: "https://i.ibb.co/4wHQT7Qw/10db31b65c8d09ac1d719e49ee891ce8db3179283858330aefcc22c291657b43-200.jpg", desc: "VPN gratis", link: "https://manzmodz.blogspot.com/2026/02/vpn-super-proxy.html", version: "2.8.1" }
+                { name: "Vpn Super Proxy", kategori: "VPN", icon: "https://i.ibb.co/4wHQT7Qw/10db31b65c8d09ac1d719e49ee891ce8db3179283858330aefcc22c291657b43-200.jpg", desc: "VPN gratis", link: "https://manzmodz.blogspot.com/2026/02/vpn-super-proxy.html", version: "2.8.1" },
+
+                // --- APLIKASI BARU (11) ---
+                { name: "Cloudplay", kategori: "Game", icon: "https://i.ibb.co.com/fYSQKpcJ/20260228-090331.jpg", desc: "Layanan cloud gaming untuk memainkan game berat di HP kentang.", link: "https://manzmodz.blogspot.com/2026/02/cloudplay.html", version: "1.5.2" },
+                { name: "Micro Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/7xP4xKh7/101bb1e21cd8c8d1a956170721ea6af3bd685431bbb4d94ab0f79ddfb0fc4650-200.jpg", desc: "Streaming drama pendek China.", link: "https://manzmodz.blogspot.com/2026/02/microdrama.html", version: "1.8.4" },
+                { name: "Minute Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/NgSr9Dcq/ec5abc7beb669e29e63d1fd6b6283b8ad95da7666d06f64327bef6017c889ebe-200.jpg", desc: "Nonton drama China singkat durasi 1-5 menit.", link: "https://manzmodz.blogspot.com/2026/02/minute-drama.html", version: "2.1.0" },
+                { name: "Muslim Pro", kategori: "Islami", icon: "https://i.ibb.co.com/7tYSshd3/f6d7c304820247fcfd25be1278e72c564e3f2aa8dad8b8f12259ff70b78c3621-200.jpg", desc: "Aplikasi Islami dengan jadwal sholat, Al-Qur'an, arah kiblat.", link: "https://manzmodz.blogspot.com/2026/02/muslim-pro.html", version: "12.5.1" },
+                { name: "One Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/B52HZNY9/47069b55de3c660ca7c37433d9c72e789b64619917952c6f8f16ccfc23ef4374-200.jpg", desc: "Platform streaming drama China.", link: "https://manzmodz.blogspot.com/2026/02/one-drama.html", version: "3.4.2" },
+                { name: "RapidTV", kategori: "Streaming", icon: "https://i.ibb.co.com/Z1RvMFrg/064e615cfa3fa636834972d895cc5f7510e06a838c72541957743dbe3fba0187-200.jpg", desc: "Streaming TV lokal dan internasional gratis.", link: "https://manzmodz.blogspot.com/2026/02/rapidtv.html", version: "4.1.7" },
+                { name: "Soda Reels", kategori: "Drama", icon: "https://i.ibb.co.com/23nKbHrn/706cec7a3f1496fb30903bf0d445a2d402ca394e7caabe0950ddf47061363379-200.jpg", desc: "Aplikasi drama pendek berbagai genre.", link: "https://manzmodz.blogspot.com/2026/02/sodareels.html", version: "2.5.3" },
+                { name: "We Muslim", kategori: "Islami", icon: "https://i.ibb.co.com/0j9gtW4c/6d514ea348745c247231b2de31893db77d2f6f72fce0bd05e12a2a44483eb1f3-200.jpg", desc: "Aplikasi Islami dengan jadwal sholat dan doa harian.", link: "https://manzmodz.blogspot.com/2026/02/wemuslim.html", version: "5.2.3" },
+                { name: "Winkit", kategori: "Editing", icon: "https://i.ibb.co.com/2YYC4Dqj/b15a08214ff89c0c7ef5f78f8fc6057f91ae68e65428114e7f0444571875a6fd-200.jpg", desc: "Edit foto dengan fitur AI, mirip Wink lebih ringan.", link: "https://manzmodz.blogspot.com/2026/02/winkit.html", version: "2.3.1" }
             ];
+
+            // Debug: cek jumlah apps di console
+            console.log('Total apps:', apps.length);
+
+            // Update total apps di header
+            document.getElementById('totalApps').textContent = apps.length;
 
             // Hitung jumlah per kategori
             const kategoriCount = {};
@@ -187,83 +259,97 @@
             });
             const kategoriList = [...new Set(apps.map(app => app.kategori))].sort();
 
-            // Update total apps di header
-            document.getElementById('totalApps').textContent = apps.length;
-
-            // Render tombol kategori
-            const kategoriContainer = document.getElementById('kategoriButtons');
-            function renderKategoriButtons(activeKategori = null) {
+            // Render kategori di sidebar
+            const kategoriContainer = document.getElementById('kategoriList');
+            function renderKategori(activeKategori = null) {
                 kategoriContainer.innerHTML = '';
                 // Tombol "Semua"
-                const allBtn = document.createElement('button');
-                allBtn.className = `kategori-btn ${activeKategori === null ? 'active' : ''}`;
-                allBtn.innerHTML = `Semua <span class="count">${apps.length}</span>`;
-                allBtn.onclick = () => {
-                    filterApps(null);
+                const allItem = document.createElement('li');
+                allItem.className = 'kategori-item';
+                const allLink = document.createElement('a');
+                allLink.className = `kategori-link ${activeKategori === null ? 'active' : ''}`;
+                allLink.innerHTML = `<i class="fas fa-th-large"></i> Semua <span class="kategori-count">${apps.length}</span>`;
+                allLink.onclick = (e) => {
+                    e.preventDefault();
                     setActiveKategori(null);
+                    filterApps(null);
                 };
-                kategoriContainer.appendChild(allBtn);
+                allItem.appendChild(allLink);
+                kategoriContainer.appendChild(allItem);
 
-                // Tombol untuk setiap kategori
+                // Tombol setiap kategori
                 kategoriList.forEach(kat => {
-                    const btn = document.createElement('button');
-                    btn.className = `kategori-btn ${activeKategori === kat ? 'active' : ''}`;
-                    btn.innerHTML = `${kat} <span class="count">${kategoriCount[kat]}</span>`;
-                    btn.onclick = () => {
-                        filterApps(kat);
+                    const item = document.createElement('li');
+                    item.className = 'kategori-item';
+                    const link = document.createElement('a');
+                    link.className = `kategori-link ${activeKategori === kat ? 'active' : ''}`;
+                    link.innerHTML = `<i class="fas fa-folder"></i> ${kat} <span class="kategori-count">${kategoriCount[kat]}</span>`;
+                    link.onclick = (e) => {
+                        e.preventDefault();
                         setActiveKategori(kat);
+                        filterApps(kat);
                     };
-                    kategoriContainer.appendChild(btn);
+                    item.appendChild(link);
+                    kategoriContainer.appendChild(item);
                 });
             }
 
+            // Render kategori di footer (5 kategori pertama)
+            const footerKategori = document.getElementById('footerKategori');
+            kategoriList.slice(0, 5).forEach(kat => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.textContent = kat;
+                a.onclick = (e) => {
+                    e.preventDefault();
+                    setActiveKategori(kat);
+                    filterApps(kat);
+                    document.getElementById('allAppsTitle').scrollIntoView({ behavior: 'smooth' });
+                };
+                li.appendChild(a);
+                footerKategori.appendChild(li);
+            });
+
+            // Helper set active class
             function setActiveKategori(kategori) {
-                const btns = document.querySelectorAll('.kategori-btn');
-                btns.forEach(btn => {
-                    btn.classList.remove('active');
-                    if (kategori === null && btn.textContent.includes('Semua')) {
-                        btn.classList.add('active');
-                    } else if (btn.textContent.includes(kategori)) {
-                        btn.classList.add('active');
-                    }
-                });
+                const links = document.querySelectorAll('.kategori-link');
+                links.forEach(link => link.classList.remove('active'));
+                if (kategori === null) {
+                    const allLink = Array.from(links).find(link => link.innerHTML.includes('Semua'));
+                    if (allLink) allLink.classList.add('active');
+                } else {
+                    const targetLink = Array.from(links).find(link => link.textContent.includes(kategori));
+                    if (targetLink) targetLink.classList.add('active');
+                }
             }
 
-            // Render grid
-            const grid = document.getElementById('appsGrid');
-            function renderApps(appsToRender) {
-                grid.innerHTML = '';
-                if (appsToRender.length === 0) {
-                    grid.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:50px; color:#888;">Tidak ada aplikasi ditemukan</div>';
-                    return;
-                }
-                appsToRender.forEach(app => {
-                    const card = document.createElement('div');
-                    card.className = 'app-card';
-                    card.onclick = () => window.open(app.link, '_blank');
-                    card.innerHTML = `
-                        <div class="app-card-header">
-                            <img src="${app.icon}" alt="${app.name}" class="app-icon" onerror="this.src='https://via.placeholder.com/60?text=Error'">
-                            <div>
-                                <div class="app-name">${app.name}</div>
-                                <span class="app-category">${app.kategori}</span>
-                            </div>
+            // Helper buat card
+            function createAppCard(app) {
+                const card = document.createElement('div');
+                card.className = 'app-card';
+                card.onclick = () => window.open(app.link, '_blank');
+                card.innerHTML = `
+                    <div class="app-card-header">
+                        <img src="${app.icon}" alt="${app.name}" class="app-icon" onerror="this.src='https://via.placeholder.com/60?text=Error'">
+                        <div>
+                            <div class="app-name">${app.name}</div>
+                            <span class="app-category">${app.kategori}</span>
                         </div>
-                        <div class="app-desc">${app.desc}</div>
-                        <div class="app-meta">
-                            <span class="app-version"><i class="fas fa-code-branch"></i> ${app.version}</span>
-                            <span class="app-download"><i class="fas fa-download"></i> Download</span>
-                        </div>
-                    `;
-                    grid.appendChild(card);
-                });
+                    </div>
+                    <div class="app-desc">${app.desc}</div>
+                    <div class="app-meta">
+                        <span class="app-version"><i class="fas fa-code-branch"></i> ${app.version}</span>
+                        <span class="app-download"><i class="fas fa-download"></i> Download</span>
+                    </div>
+                `;
+                return card;
             }
 
             // Filter berdasarkan kategori dan search
             let currentKategori = null;
             let currentSearch = '';
 
-            function filterApps(kategori, searchTerm = currentSearch) {
+            function filterApps(kategori = null, searchTerm = '') {
                 currentKategori = kategori;
                 currentSearch = searchTerm;
                 const filtered = apps.filter(app => {
@@ -274,14 +360,24 @@
                         app.kategori.toLowerCase().includes(searchTerm.toLowerCase());
                     return matchKategori && matchSearch;
                 });
-                renderApps(filtered);
+
+                document.getElementById('allAppsTitle').textContent = 
+                    searchTerm ? `Hasil Pencarian: "${searchTerm}" (${filtered.length})` :
+                    kategori ? `Kategori: ${kategori} (${filtered.length})` :
+                    `Semua Aplikasi (${filtered.length})`;
+
+                const grid = document.getElementById('appsGrid');
+                grid.innerHTML = '';
+                if (filtered.length === 0) {
+                    grid.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:50px; color:#888;">Tidak ada aplikasi ditemukan</div>';
+                } else {
+                    filtered.forEach(app => grid.appendChild(createAppCard(app)));
+                }
             }
 
-            // Inisialisasi: tampilkan semua
-            filterApps(null);
-
-            // Render tombol kategori dengan active null
-            renderKategoriButtons(null);
+            // Inisialisasi
+            filterApps();
+            renderKategori(null);
 
             // Search
             const searchInput = document.getElementById('searchInput');
@@ -289,8 +385,6 @@
             function doSearch() {
                 const term = searchInput.value.trim();
                 filterApps(currentKategori, term);
-                // Reset active kategori ke null jika search dilakukan? (opsional)
-                // setActiveKategori(null); currentKategori = null;
             }
             searchButton.addEventListener('click', doSearch);
             searchInput.addEventListener('keyup', e => {
