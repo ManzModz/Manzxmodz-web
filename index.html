@@ -42,7 +42,7 @@
         .search-box {
             flex: 0 1 240px; display: flex; background: #252525; border-radius: 30px; padding: 3px; border: 1px solid #333;
             margin-left: auto;
-            margin-right: 70px; /* ruang untuk logo */
+            margin-right: 70px;
         }
         .search-box input {
             flex: 1; background: transparent; border: none; padding: 6px 10px; color: white; font-size: 0.8rem; outline: none;
@@ -92,7 +92,6 @@
 
         .content { flex: 1; }
 
-        /* Karakter besar di tengah - tanpa border */
         .character-large {
             text-align: center;
             margin-bottom: 30px;
@@ -408,7 +407,7 @@
                 { name: "Cloudplay", kategori: "Anime", icon: "https://i.ibb.co.com/fYSQKpcJ/20260228-090331.jpg", desc: "Streaming anime & cloud gaming", link: "https://manzmodz.blogspot.com/2026/02/cloudplay.html", version: "1.5.2", hit: 0 },
                 { name: "Donghub", kategori: "Anime", icon: "https://i.ibb.co/FLr01LxG/20260223-174655.jpg", desc: "Nonton anime", link: "https://manzmodz.blogspot.com/2026/02/donghub.html", version: "2.4.8", hit: 0 },
                 { name: "Nonton Anime", kategori: "Anime", icon: "https://i.ibb.co.com/vxDLdKb9/20260223-174528.jpg", desc: "Streaming anime subtitle Indonesia", link: "https://manzmodz.blogspot.com/2026/02/nonton-anime.html", version: "1.0", hit: 0 },
-                // Streaming Drama (5) - DITAMBAHKAN KEMBALI
+                // Streaming Drama (5)
                 { name: "IMDb", kategori: "Streaming Drama", icon: "https://i.ibb.co/yz1y1pm/20260223-234842.webp", desc: "Rating film", link: "https://manzmodz.blogspot.com/2026/02/imdb.html", version: "5.2.1", hit: 0 },
                 { name: "LokLok", kategori: "Streaming Drama", icon: "https://i.ibb.co/fYjxmDxc/20260223-174713.jpg", desc: "Streaming drama", link: "https://manzmodz.blogspot.com/2026/02/loklok.html", version: "3.5.2", hit: 0 },
                 { name: "LokTv", kategori: "Streaming Drama", icon: "https://i.ibb.co/DHxcypvj/20260223-174735.webp", desc: "Drama Korea", link: "https://manzmodz.blogspot.com/2026/02/loktv.html", version: "4.0.3", hit: 0 },
@@ -417,7 +416,7 @@
                 // Music (2)
                 { name: "Spotify", kategori: "Music", icon: "https://i.ibb.co/Zp6WwVMC/20260223-174518.jpg", desc: "Musik premium", link: "https://manzmodz.blogspot.com/2026/02/spotify.html", version: "8.8.96", hit: 0 },
                 { name: "Spotify Pro", kategori: "Music", icon: "https://i.ibb.co.com/Zp6WwVMC/20260223-174518.jpg", desc: "Spotify versi Pro Lite tanpa iklan", link: "https://manzmodz.blogspot.com/2026/03/spotify-pro.html", version: "Pro Lite", hit: 0 },
-                // Video (1) - DITAMBAHKAN KEMBALI
+                // Video (1)
                 { name: "YouTube", kategori: "Video", icon: "https://i.ibb.co/3Ypw0dC9/20260225-111542.jpg", desc: "YouTube Premium", link: "https://manzmodz.blogspot.com/2026/02/youtube.html", version: "19.16.39", hit: 0 },
                 // Editing (10)
                 { name: "Alight Motion", kategori: "Editing", icon: "https://i.ibb.co/qLSdDvqk/20260223-143713.jpg", desc: "Motion graphic", link: "https://manzmodz.blogspot.com/2026/02/alight-motion.html", version: "5.0.7", hit: 0 },
@@ -437,10 +436,32 @@
                 { name: "TeraBox", kategori: "Alat", icon: "https://i.ibb.co.com/LdnqbHc1/abfd9d28f21f9f8eee8419e34f4c881c16677c4a2903a466d16033f132c21d44-200.jpg", desc: "Cloud storage gratis kapasitas besar", link: "https://manzmodz.blogspot.com/2026/03/terabox.html", version: "1.0", hit: 0 }
             ];
 
-            // ========== SET HIT COUNTER ACAK 100-1000 ==========
+            // ========== HIT COUNTER (TETAP & NAMBAH) ==========
+            let storedHits = JSON.parse(localStorage.getItem('manzHits')) || {};
+
             apps.forEach(app => {
-                app.hit = Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
+                if (storedHits[app.name]) {
+                    app.hit = storedHits[app.name];
+                } else {
+                    let randomHit = Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
+                    app.hit = randomHit;
+                    storedHits[app.name] = randomHit;
+                }
             });
+
+            localStorage.setItem('manzHits', JSON.stringify(storedHits));
+
+            function incrementHit(appName) {
+                let hits = JSON.parse(localStorage.getItem('manzHits')) || {};
+                hits[appName] = (hits[appName] || 0) + 1;
+                localStorage.setItem('manzHits', JSON.stringify(hits));
+
+                let app = apps.find(a => a.name === appName);
+                if (app) app.hit = hits[appName];
+
+                renderFeatured();
+                filterApps(currentKategori, currentSearch, currentSort);
+            }
 
             // Update total apps di header
             document.getElementById('totalApps').textContent = apps.length;
@@ -512,17 +533,6 @@
                     `;
                     featuredGrid.appendChild(card);
                 });
-            }
-
-            // Hit counter (increment)
-            function incrementHit(appName) {
-                const hits = JSON.parse(localStorage.getItem('manzHits')) || {};
-                hits[appName] = (hits[appName] || 0) + 1;
-                localStorage.setItem('manzHits', JSON.stringify(hits));
-                const app = apps.find(a => a.name === appName);
-                if (app) app.hit = hits[appName];
-                renderFeatured();
-                filterApps(currentKategori, currentSearch, currentSort);
             }
 
             function createAppCard(app) {
@@ -715,4 +725,4 @@
         });
     </script>
 </body>
-</html>>
+</html>
