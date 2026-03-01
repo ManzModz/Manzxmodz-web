@@ -24,83 +24,35 @@
             flex-wrap: wrap;
             gap: 15px;
         }
-        .logo h1 { 
-            color: #ff4fd8; 
-            font-size: 1.8rem; 
-            line-height: 1.2;
-        }
-        .logo span { 
-            color: #9d4dff; 
-            font-size: 0.9rem; 
-            display: block; 
-        }
-        /* Logo ManzMods di pojok kanan atas */
+        .logo h1 { color: #ff4fd8; font-size: 1.8rem; line-height: 1.2; }
+        .logo span { color: #9d4dff; font-size: 0.9rem; display: block; }
         .manz-logo {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 2px solid #ff4fd8;
-            box-shadow: 0 0 15px rgba(255,79,216,0.5);
-            z-index: 10;
+            position: absolute; top: 10px; right: 20px; width: 50px; height: 50px; border-radius: 50%;
+            overflow: hidden; border: 2px solid #ff4fd8; box-shadow: 0 0 15px rgba(255,79,216,0.5); z-index: 10;
         }
-        .manz-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        /* Search box */
+        .manz-logo img { width: 100%; height: 100%; object-fit: cover; }
         .search-box {
-            flex: 0 1 250px;
-            display: flex;
-            background: #252525;
-            border-radius: 30px;
-            padding: 3px;
-            border: 1px solid #333;
-            margin-left: auto;
-            margin-right: 80px;
+            flex: 0 1 250px; display: flex; background: #252525; border-radius: 30px; padding: 3px; border: 1px solid #333;
+            margin-left: auto; margin-right: 80px;
         }
         .search-box input {
-            flex: 1;
-            background: transparent;
-            border: none;
-            padding: 6px 12px;
-            color: white;
-            font-size: 0.85rem;
-            outline: none;
+            flex: 1; background: transparent; border: none; padding: 6px 12px; color: white; font-size: 0.85rem; outline: none;
         }
         .search-box button {
-            background: #ff4fd8;
-            border: none;
-            color: white;
-            padding: 0 12px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: 500;
-            font-size: 0.85rem;
+            background: #ff4fd8; border: none; color: white; padding: 0 12px; border-radius: 30px;
+            cursor: pointer; font-weight: 500; font-size: 0.85rem;
         }
         .header-stats { color: #888; font-size: 0.9rem; }
 
-        /* Running text (teks berjalan) */
+        /* Running text */
         .running-text {
-            width: 100%;
-            overflow: hidden;
-            background: linear-gradient(45deg, #ff4fd8, #9d4dff);
-            color: white;
-            padding: 12px 0;
-            white-space: nowrap;
-            box-shadow: 0 2px 10px rgba(255,79,216,0.3);
+            width: 100%; overflow: hidden; background: linear-gradient(45deg, #ff4fd8, #9d4dff);
+            color: white; padding: 12px 0; white-space: nowrap; box-shadow: 0 2px 10px rgba(255,79,216,0.3);
             margin-bottom: 20px;
         }
         .running-text p {
-            display: inline-block;
-            animation: scroll-left 18s linear infinite;
-            font-weight: 600;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
+            display: inline-block; animation: scroll-left 18s linear infinite;
+            font-weight: 600; font-size: 1.1rem; letter-spacing: 1px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
         @keyframes scroll-left {
@@ -108,143 +60,179 @@
             100% { transform: translateX(-100%); }
         }
 
+        /* Main layout */
         .main-container { max-width: 1400px; margin: 30px auto; padding: 0 20px; display: flex; gap: 30px; }
 
-        /* Sidebar Kategori */
+        /* Sidebar */
         .sidebar { width: 260px; flex-shrink: 0; }
         .kategori-box {
             background: #1a1a1a; border-radius: 20px; padding: 20px; border: 1px solid #333;
             position: sticky; top: 20px;
         }
-        .kategori-box h3 {
-            color: #ff9efc; margin-bottom: 20px; font-size: 1.2rem;
-            display: flex; align-items: center; gap: 10px;
-        }
+        .kategori-box h3 { color: #ff9efc; margin-bottom: 20px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
         .kategori-list { list-style: none; max-height: 400px; overflow-y: auto; padding-right: 5px; }
         .kategori-item { margin-bottom: 10px; }
         .kategori-link {
-            color: #aaa; text-decoration: none; display: flex; align-items: center; gap: 12px;
-            padding: 10px 15px; border-radius: 12px; transition: 0.3s; font-size: 0.95rem;
-            cursor: pointer; border: none; background: none; width: 100%; text-align: left;
+            color: #aaa; text-decoration: none; display: flex; align-items: center; gap: 12px; padding: 10px 15px;
+            border-radius: 12px; transition: 0.3s; font-size: 0.95rem; cursor: pointer; border: none; background: none; width: 100%; text-align: left;
         }
         .kategori-link i { width: 20px; color: #ff4fd8; }
         .kategori-link:hover { background: #252525; color: white; transform: translateX(5px); }
         .kategori-link.active { background: #ff4fd8; color: white; }
         .kategori-link.active i { color: white; }
         .kategori-count {
-            margin-left: auto; background: #333; padding: 2px 8px;
-            border-radius: 20px; font-size: 0.8rem; color: #ccc;
+            margin-left: auto; background: #333; padding: 2px 8px; border-radius: 20px; font-size: 0.8rem; color: #ccc;
         }
 
-        /* Konten Utama */
+        /* Content */
         .content { flex: 1; }
-        .section-title {
+
+        /* View toggle (Grid/List) */
+        .view-toggle {
+            display: flex; justify-content: flex-end; margin-bottom: 20px; gap: 10px;
+        }
+        .view-btn {
+            background: #1a1a1a; border: 1px solid #333; color: #aaa; padding: 8px 16px;
+            border-radius: 30px; cursor: pointer; transition: 0.3s; font-size: 0.9rem;
+        }
+        .view-btn.active { background: #ff4fd8; color: white; border-color: #ff4fd8; }
+        .view-btn i { margin-right: 5px; }
+
+        /* Featured Apps Section */
+        .featured-section {
+            margin-bottom: 40px;
+        }
+        .featured-title {
             font-size: 1.5rem; font-weight: 600; margin-bottom: 20px; color: white;
             border-left: 5px solid #ff4fd8; padding-left: 15px;
         }
+        .featured-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;
+        }
+        .featured-card {
+            background: linear-gradient(145deg, #252525, #1a1a1a); border-radius: 20px; padding: 20px;
+            border: 1px solid #ff4fd8; cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 15px;
+        }
+        .featured-card:hover {
+            transform: translateY(-5px); box-shadow: 0 10px 30px rgba(255,79,216,0.3);
+        }
+        .featured-icon { width: 60px; height: 60px; border-radius: 18px; border: 2px solid #ff4fd8; object-fit: cover; }
+        .featured-info h4 { color: white; font-size: 1.2rem; margin-bottom: 5px; }
+        .featured-info p { color: #aaa; font-size: 0.85rem; }
 
-        /* Slider Streaming Drama */
-        .slider-container {
-            margin-bottom: 40px;
-        }
-        .slider-title {
-            font-size: 1.3rem; font-weight: 600; margin-bottom: 15px; color: #ff9efc;
-            display: flex; align-items: center; gap: 10px;
-        }
-        .slider-wrapper {
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-            padding-bottom: 10px;
-            margin-bottom: 10px;
-        }
-        .slider-wrapper::-webkit-scrollbar {
-            height: 6px;
-        }
-        .slider-wrapper::-webkit-scrollbar-track {
-            background: #1a1a1a;
-            border-radius: 10px;
-        }
-        .slider-wrapper::-webkit-scrollbar-thumb {
-            background: #ff4fd8;
-            border-radius: 10px;
-        }
-        .slider-grid {
-            display: flex;
-            gap: 20px;
-            width: max-content;
-        }
+        /* Slider Streaming Drama (tetap ada) */
+        .slider-container { margin-bottom: 40px; }
+        .slider-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 15px; color: #ff9efc; display: flex; align-items: center; gap: 10px; }
+        .slider-wrapper { overflow-x: auto; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding-bottom: 10px; }
+        .slider-wrapper::-webkit-scrollbar { height: 6px; }
+        .slider-wrapper::-webkit-scrollbar-track { background: #1a1a1a; border-radius: 10px; }
+        .slider-wrapper::-webkit-scrollbar-thumb { background: #ff4fd8; border-radius: 10px; }
+        .slider-grid { display: flex; gap: 20px; width: max-content; }
         .slider-card {
-            background: #1a1a1a;
-            border-radius: 20px;
-            padding: 15px;
-            border: 1px solid #333;
-            cursor: pointer;
-            transition: 0.3s;
-            width: 200px;
-            flex-shrink: 0;
+            background: #1a1a1a; border-radius: 20px; padding: 15px; border: 1px solid #333;
+            cursor: pointer; transition: 0.3s; width: 200px; flex-shrink: 0;
         }
-        .slider-card:hover {
-            border-color: #ff4fd8;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255,79,216,0.2);
-        }
-        .slider-card-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 10px;
-        }
-        .slider-icon {
-            width: 50px; height: 50px; border-radius: 15px; border: 2px solid #ff4fd8;
-            object-fit: cover;
-        }
-        .slider-name {
-            font-weight: 600; color: white; font-size: 1rem;
-        }
-        .slider-desc {
-            color: #aaa; font-size: 0.8rem; line-height: 1.4; margin-bottom: 10px;
-        }
+        .slider-card:hover { border-color: #ff4fd8; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(255,79,216,0.2); }
+        .slider-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+        .slider-icon { width: 50px; height: 50px; border-radius: 15px; border: 2px solid #ff4fd8; object-fit: cover; }
+        .slider-name { font-weight: 600; color: white; font-size: 1rem; }
+        .slider-desc { color: #aaa; font-size: 0.8rem; line-height: 1.4; margin-bottom: 10px; }
 
-        /* Grid Aplikasi */
+        /* Filter bar (by version/update) */
+        .filter-bar {
+            display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; align-items: center;
+        }
+        .filter-select {
+            background: #252525; border: 1px solid #333; color: white; padding: 8px 16px;
+            border-radius: 30px; font-size: 0.9rem; cursor: pointer; outline: none;
+        }
+        .filter-select option { background: #1a1a1a; }
+
+        /* Apps grid (list view support) */
         .apps-grid {
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 25px; margin-bottom: 40px;
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 25px; margin-bottom: 40px;
+            transition: all 0.3s;
+        }
+        .apps-grid.list-view {
+            grid-template-columns: 1fr; gap: 15px;
         }
         .app-card {
             background: #1a1a1a; border-radius: 20px; padding: 20px; border: 1px solid #333;
             cursor: pointer; transition: 0.3s; display: flex; flex-direction: column;
         }
-        .app-card:hover {
-            border-color: #ff4fd8; transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255,79,216,0.2);
+        .list-view .app-card {
+            flex-direction: row; align-items: center; gap: 20px; padding: 15px 20px;
         }
+        .app-card:hover { border-color: #ff4fd8; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(255,79,216,0.2); }
+        .list-view .app-card:hover { transform: translateY(-2px); }
         .app-card-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
-        .app-icon {
-            width: 60px; height: 60px; border-radius: 18px; border: 2px solid #ff4fd8;
-            object-fit: cover;
-        }
+        .list-view .app-card-header { margin-bottom: 0; width: 250px; }
+        .app-icon { width: 60px; height: 60px; border-radius: 18px; border: 2px solid #ff4fd8; object-fit: cover; }
         .app-name { font-weight: 600; color: white; font-size: 1.1rem; }
         .app-category {
-            color: #ff9efc; font-size: 0.75rem; background: #252525;
-            padding: 3px 10px; border-radius: 20px; display: inline-block; margin-top: 5px;
+            color: #ff9efc; font-size: 0.75rem; background: #252525; padding: 3px 10px;
+            border-radius: 20px; display: inline-block; margin-top: 5px;
         }
         .app-desc { color: #aaa; font-size: 0.9rem; line-height: 1.5; margin-bottom: 15px; flex: 1; }
+        .list-view .app-desc { margin-bottom: 0; margin-right: 20px; }
         .app-meta {
-            display: flex; justify-content: space-between; align-items: center;
-            border-top: 1px solid #333; padding-top: 12px; font-size: 0.8rem;
+            display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #333;
+            padding-top: 12px; font-size: 0.8rem;
         }
+        .list-view .app-meta { border-top: none; padding-top: 0; min-width: 200px; }
         .app-version { background: #252525; padding: 4px 12px; border-radius: 20px; color: #ccc; }
+        .app-hit { color: #ff9efc; font-size: 0.8rem; margin-left: 5px; }
         .app-download { color: #ff4fd8; font-weight: 600; }
 
-        /* AdSense */
-        .adsense-container {
-            margin: 30px 0;
-            padding: 20px;
-            background: #1a1a1a;
-            border-radius: 20px;
-            text-align: center;
-            border: 1px dashed #ff4fd8;
+        /* Hit counter style */
+        .hit-counter {
+            font-size: 0.8rem; color: #888; display: inline-flex; align-items: center; gap: 3px; margin-left: 10px;
+        }
+        .hit-counter i { color: #ff4fd8; }
+
+        /* Komentar sederhana */
+        .komentar-section {
+            background: #1a1a1a; border-radius: 20px; padding: 20px; margin-top: 40px; border: 1px solid #333;
+        }
+        .komentar-section h3 { color: #ff9efc; margin-bottom: 20px; }
+        .komentar-form { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        .komentar-form input {
+            flex: 1; min-width: 200px; background: #252525; border: 1px solid #333; padding: 10px 15px;
+            border-radius: 30px; color: white; outline: none;
+        }
+        .komentar-form button {
+            background: #ff4fd8; border: none; color: white; padding: 10px 25px; border-radius: 30px;
+            cursor: pointer; font-weight: 500;
+        }
+        .komentar-list { max-height: 300px; overflow-y: auto; padding-right: 10px; }
+        .komentar-item {
+            background: #252525; border-radius: 15px; padding: 15px; margin-bottom: 10px;
+            border-left: 3px solid #ff4fd8;
+        }
+        .komentar-nama { color: #ff9efc; font-weight: 600; margin-bottom: 5px; }
+        .komentar-teks { color: #ddd; font-size: 0.9rem; }
+        .komentar-waktu { color: #888; font-size: 0.7rem; margin-top: 5px; }
+
+        /* Request APK Form */
+        .request-section {
+            background: #1a1a1a; border-radius: 20px; padding: 20px; margin-top: 40px; border: 1px solid #333;
+        }
+        .request-section h3 { color: #ff9efc; margin-bottom: 20px; }
+        .request-form { display: flex; flex-direction: column; gap: 15px; }
+        .request-form input, .request-form textarea {
+            background: #252525; border: 1px solid #333; padding: 12px 15px; border-radius: 15px;
+            color: white; outline: none; width: 100%;
+        }
+        .request-form textarea { min-height: 100px; resize: vertical; }
+        .request-form button {
+            background: linear-gradient(45deg, #ff4fd8, #9d4dff); border: none; color: white;
+            padding: 12px; border-radius: 30px; cursor: pointer; font-weight: 600; font-size: 1rem;
+        }
+
+        /* Ads lebih rapi */
+        .ads-container {
+            margin: 30px 0; padding: 20px; background: #1a1a1a; border-radius: 20px;
+            text-align: center; border: 1px dashed #ff4fd8;
         }
 
         .footer {
@@ -259,10 +247,7 @@
         .footer-col li { margin-bottom: 10px; }
         .footer-col a { color: #aaa; text-decoration: none; transition: 0.3s; cursor: pointer; }
         .footer-col a:hover { color: #ff4fd8; }
-        .footer-bottom {
-            text-align: center; color: #666; padding-top: 30px;
-            margin-top: 30px; border-top: 1px solid #333;
-        }
+        .footer-bottom { text-align: center; color: #666; padding-top: 30px; margin-top: 30px; border-top: 1px solid #333; }
 
         @media (max-width: 900px) {
             .main-container { flex-direction: column; }
@@ -273,6 +258,8 @@
             .search-box { margin-right: 0; flex: 1; }
             .manz-logo { position: relative; top: auto; right: auto; margin-top: 10px; }
             .header-container { flex-direction: column; align-items: flex-start; }
+            .list-view .app-card { flex-direction: column; align-items: flex-start; }
+            .list-view .app-card-header { width: auto; }
         }
     </style>
     <!-- AdSense placeholder – GANTI DENGAN KODE ASLI ANDA -->
@@ -290,22 +277,21 @@
                 <button id="searchButton"><i class="fas fa-search"></i></button>
             </div>
             <div class="header-stats">
-                <i class="fas fa-box"></i> <span id="totalApps">59</span> APK
+                <i class="fas fa-box"></i> <span id="totalApps">49</span> APK
             </div>
-            <!-- Logo ManzMods -->
             <div class="manz-logo">
                 <img src="https://i.ibb.co.com/mCdXYPt8/ai-repair-20260220002234645.jpg" alt="ManzMods Logo">
             </div>
         </div>
     </div>
 
-    <!-- Running text (teks berjalan) -->
+    <!-- Running text -->
     <div class="running-text">
         <p>ManzModz Memberikan Aplikasi 100% Aman, Dan Terimakasih Yang Sudah Support🎉🎉</p>
     </div>
 
-    <!-- AdSense Header -->
-    <div class="adsense-container">
+    <!-- Ads Header (lebih rapi) -->
+    <div class="ads-container">
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
@@ -321,7 +307,7 @@
             <div class="kategori-box">
                 <h3><i class="fas fa-filter"></i> Kategori</h3>
                 <ul class="kategori-list" id="kategoriList"></ul>
-                <!-- AdSense Sidebar -->
+                <!-- Ads Sidebar -->
                 <div style="margin-top:20px;">
                     <ins class="adsbygoogle"
                          style="display:block"
@@ -335,6 +321,18 @@
 
         <!-- Konten Utama -->
         <div class="content">
+            <!-- View Toggle (Grid/List) -->
+            <div class="view-toggle">
+                <button class="view-btn active" id="gridViewBtn"><i class="fas fa-th"></i> Grid</button>
+                <button class="view-btn" id="listViewBtn"><i class="fas fa-list"></i> List</button>
+            </div>
+
+            <!-- Featured Apps Section -->
+            <div class="featured-section" id="featuredSection">
+                <div class="featured-title"><i class="fas fa-star" style="color: gold;"></i> Aplikasi Unggulan</div>
+                <div class="featured-grid" id="featuredGrid"></div>
+            </div>
+
             <!-- Slider Streaming Drama -->
             <div class="slider-container" id="sliderContainer">
                 <div class="slider-title">
@@ -345,11 +343,43 @@
                 </div>
             </div>
 
+            <!-- Filter Bar (by version/update) -->
+            <div class="filter-bar">
+                <label><i class="fas fa-filter"></i> Urutkan:</label>
+                <select class="filter-select" id="sortSelect">
+                    <option value="name">Nama (A-Z)</option>
+                    <option value="nameDesc">Nama (Z-A)</option>
+                    <option value="version">Versi Terbaru</option>
+                    <option value="hit">Paling Populer</option>
+                </select>
+            </div>
+
             <h2 class="section-title" id="allAppsTitle">Semua Aplikasi (59)</h2>
             <div class="apps-grid" id="appsGrid"></div>
 
-            <!-- AdSense Footer -->
-            <div class="adsense-container">
+            <!-- Komentar Sederhana -->
+            <div class="komentar-section" id="komentarSection">
+                <h3><i class="fas fa-comments"></i> Kolom Komentar</h3>
+                <div class="komentar-form">
+                    <input type="text" id="namaKomentar" placeholder="Nama Anda">
+                    <input type="text" id="isiKomentar" placeholder="Komentar...">
+                    <button onclick="tambahKomentar()">Kirim</button>
+                </div>
+                <div class="komentar-list" id="komentarList"></div>
+            </div>
+
+            <!-- Request APK Form -->
+            <div class="request-section">
+                <h3><i class="fas fa-box-open"></i> Request Aplikasi</h3>
+                <form class="request-form" id="requestForm">
+                    <input type="text" id="requestNama" placeholder="Nama Aplikasi yang diminta" required>
+                    <textarea id="requestKeterangan" placeholder="Keterangan tambahan (opsional)"></textarea>
+                    <button type="submit">Kirim Request</button>
+                </form>
+            </div>
+
+            <!-- Ads Footer -->
+            <div class="ads-container">
                 <ins class="adsbygoogle"
                      style="display:block"
                      data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
@@ -388,72 +418,71 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // ==================== DATA APLIKASI (59 APK) ====================
+            // Data aplikasi (59 APK) – sama persis dengan sebelumnya
             const apps = [
                 // Drama China (18)
-                { name: "Cool Scene Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/JWnKP7rn/f58f7d1a7bd003407536a1514c07dea7-icon.png", desc: "Koleksi drama China dengan scene keren", link: "https://manzmodz.blogspot.com/2026/02/cool-scene-drama.html", version: "1.0" },
-                { name: "Crazy Popcorn", kategori: "Drama China", icon: "https://i.ibb.co.com/Pv0fQ9d4/icon.png", desc: "Aplikasi hiburan drama China", link: "https://manzmodz.blogspot.com/2026/02/crazy-popcorn.html", version: "1.0" },
-                { name: "DramaBox", kategori: "Drama China", icon: "https://i.ibb.co/B5DfWV5C/1cbcda7e556f5173bbaf9a04caec6c1815a1111b7551538739a7acea2a3d40d5-200.jpg", desc: "Koleksi drama China", link: "https://manzmodz.blogspot.com/2026/02/dramabox.html", version: "4.5.0" },
-                { name: "DramaNova", kategori: "Drama China", icon: "https://i.ibb.co/NnfnfnBw/20260223-174606.jpg", desc: "Koleksi drama China terbaru", link: "https://manzmodz.blogspot.com/2026/02/dramanova.html", version: "4.2.1" },
-                { name: "DramaRush", kategori: "Drama China", icon: "https://i.ibb.co/bMrZ9Ls3/20260227-114542.jpg", desc: "Drama China terbaru", link: "https://manzmodz.blogspot.com/2026/02/dramarush.html", version: "3.4.1" },
-                { name: "DrapaPops", kategori: "Drama China", icon: "https://i.ibb.co/Lzr4Ktjv/20260224-110757.jpg", desc: "Drama China lengkap", link: "https://manzmodz.blogspot.com/2026/02/dramapops.html", version: "1.7.5" },
-                { name: "FreeReels", kategori: "Drama China", icon: "https://i.ibb.co/2YvHgjTq/20260223-174659.jpg", desc: "Nonton drama China gratis", link: "https://manzmodz.blogspot.com/2026/02/freereels.html", version: "2.1.3" },
-                { name: "Melolo", kategori: "Drama China", icon: "https://i.ibb.co/mk0Xrgq/20260223-174801.jpg", desc: "Update drama China", link: "https://manzmodz.blogspot.com/2026/02/melolo.html", version: "1.9.4" },
-                { name: "Micro Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/7xP4xKh7/101bb1e21cd8c8d1a956170721ea6af3bd685431bbb4d94ab0f79ddfb0fc4650-200.jpg", desc: "Streaming drama pendek China", link: "https://manzmodz.blogspot.com/2026/02/microdrama.html", version: "1.8.4" },
-                { name: "Minute Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/NgSr9Dcq/ec5abc7beb669e29e63d1fd6b6283b8ad95da7666d06f64327bef6017c889ebe-200.jpg", desc: "Nonton drama China singkat", link: "https://manzmodz.blogspot.com/2026/02/minute-drama.html", version: "2.1.0" },
-                { name: "My Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/5gYmTpmQ/89e27e64a9bb9cc2b86bce546c23ff7b5953e020015faffc398f51e189009db5-200.jpg", desc: "Platform drama China", link: "https://manzmodz.blogspot.com/2026/02/my-drama.html", version: "1.57.0" },
-                { name: "NetShort", kategori: "Drama China", icon: "https://i.ibb.co/skJDGBq/20260223-014332.png", desc: "Streaming drama China", link: "https://manzmodz.blogspot.com/2026/02/netshort.html", version: "2.1.5" },
-                { name: "One Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/B52HZNY9/47069b55de3c660ca7c37433d9c72e789b64619917952c6f8f16ccfc23ef4374-200.jpg", desc: "Platform streaming drama China", link: "https://manzmodz.blogspot.com/2026/02/one-drama.html", version: "3.4.2" },
-                { name: "RadReels", kategori: "Drama China", icon: "https://i.ibb.co/C57xpRcm/20260223-174747.webp", desc: "Drama China romantis", link: "https://manzmodz.blogspot.com/2026/02/radreels.html", version: "3.0.2" },
-                { name: "RapidTV", kategori: "Drama China", icon: "https://i.ibb.co.com/Z1RvMFrg/064e615cfa3fa636834972d895cc5f7510e06a838c72541957743dbe3fba0187-200.jpg", desc: "Streaming TV dan drama", link: "https://manzmodz.blogspot.com/2026/02/rapidtv.html", version: "4.1.7" },
-                { name: "Reelshort", kategori: "Drama China", icon: "https://i.ibb.co/rR9J5Dj6/20260223-143415.jpg", desc: "Drama pendek China", link: "https://manzmodz.blogspot.com/2026/02/reelshort.html", version: "2.3.0" },
-                { name: "ShortSky", kategori: "Drama China", icon: "https://i.ibb.co.com/GfbM9D3c/4bb6236b9881094eb1840a380e8bb42933914cca802207a9cefae481d114fade-200.jpg", desc: "Drama pendek China", link: "https://manzmodz.blogspot.com/2026/02/shortsky.html", version: "1.3.1" },
-                { name: "YouDrama", kategori: "Drama China", icon: "https://i.ibb.co/RG1P3Ny2/icon.webp", desc: "Streaming drama China", link: "https://manzmodz.blogspot.com/2026/02/youdrama.html", version: "2.8.4" },
+                { name: "Cool Scene Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/JWnKP7rn/f58f7d1a7bd003407536a1514c07dea7-icon.png", desc: "Koleksi drama China dengan scene keren", link: "https://manzmodz.blogspot.com/2026/02/cool-scene-drama.html", version: "1.0", hit: 0 },
+                { name: "Crazy Popcorn", kategori: "Drama China", icon: "https://i.ibb.co.com/Pv0fQ9d4/icon.png", desc: "Aplikasi hiburan drama China", link: "https://manzmodz.blogspot.com/2026/02/crazy-popcorn.html", version: "1.0", hit: 0 },
+                { name: "DramaBox", kategori: "Drama China", icon: "https://i.ibb.co/B5DfWV5C/1cbcda7e556f5173bbaf9a04caec6c1815a1111b7551538739a7acea2a3d40d5-200.jpg", desc: "Koleksi drama China", link: "https://manzmodz.blogspot.com/2026/02/dramabox.html", version: "4.5.0", hit: 0 },
+                { name: "DramaNova", kategori: "Drama China", icon: "https://i.ibb.co/NnfnfnBw/20260223-174606.jpg", desc: "Koleksi drama China terbaru", link: "https://manzmodz.blogspot.com/2026/02/dramanova.html", version: "4.2.1", hit: 0 },
+                { name: "DramaRush", kategori: "Drama China", icon: "https://i.ibb.co/bMrZ9Ls3/20260227-114542.jpg", desc: "Drama China terbaru", link: "https://manzmodz.blogspot.com/2026/02/dramarush.html", version: "3.4.1", hit: 0 },
+                { name: "DrapaPops", kategori: "Drama China", icon: "https://i.ibb.co/Lzr4Ktjv/20260224-110757.jpg", desc: "Drama China lengkap", link: "https://manzmodz.blogspot.com/2026/02/dramapops.html", version: "1.7.5", hit: 0 },
+                { name: "FreeReels", kategori: "Drama China", icon: "https://i.ibb.co/2YvHgjTq/20260223-174659.jpg", desc: "Nonton drama China gratis", link: "https://manzmodz.blogspot.com/2026/02/freereels.html", version: "2.1.3", hit: 0 },
+                { name: "Melolo", kategori: "Drama China", icon: "https://i.ibb.co/mk0Xrgq/20260223-174801.jpg", desc: "Update drama China", link: "https://manzmodz.blogspot.com/2026/02/melolo.html", version: "1.9.4", hit: 0 },
+                { name: "Micro Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/7xP4xKh7/101bb1e21cd8c8d1a956170721ea6af3bd685431bbb4d94ab0f79ddfb0fc4650-200.jpg", desc: "Streaming drama pendek China", link: "https://manzmodz.blogspot.com/2026/02/microdrama.html", version: "1.8.4", hit: 0 },
+                { name: "Minute Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/NgSr9Dcq/ec5abc7beb669e29e63d1fd6b6283b8ad95da7666d06f64327bef6017c889ebe-200.jpg", desc: "Nonton drama China singkat", link: "https://manzmodz.blogspot.com/2026/02/minute-drama.html", version: "2.1.0", hit: 0 },
+                { name: "My Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/5gYmTpmQ/89e27e64a9bb9cc2b86bce546c23ff7b5953e020015faffc398f51e189009db5-200.jpg", desc: "Platform drama China", link: "https://manzmodz.blogspot.com/2026/02/my-drama.html", version: "1.57.0", hit: 0 },
+                { name: "NetShort", kategori: "Drama China", icon: "https://i.ibb.co/skJDGBq/20260223-014332.png", desc: "Streaming drama China", link: "https://manzmodz.blogspot.com/2026/02/netshort.html", version: "2.1.5", hit: 0 },
+                { name: "One Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/B52HZNY9/47069b55de3c660ca7c37433d9c72e789b64619917952c6f8f16ccfc23ef4374-200.jpg", desc: "Platform streaming drama China", link: "https://manzmodz.blogspot.com/2026/02/one-drama.html", version: "3.4.2", hit: 0 },
+                { name: "RadReels", kategori: "Drama China", icon: "https://i.ibb.co/C57xpRcm/20260223-174747.webp", desc: "Drama China romantis", link: "https://manzmodz.blogspot.com/2026/02/radreels.html", version: "3.0.2", hit: 0 },
+                { name: "RapidTV", kategori: "Drama China", icon: "https://i.ibb.co.com/Z1RvMFrg/064e615cfa3fa636834972d895cc5f7510e06a838c72541957743dbe3fba0187-200.jpg", desc: "Streaming TV dan drama", link: "https://manzmodz.blogspot.com/2026/02/rapidtv.html", version: "4.1.7", hit: 0 },
+                { name: "Reelshort", kategori: "Drama China", icon: "https://i.ibb.co/rR9J5Dj6/20260223-143415.jpg", desc: "Drama pendek China", link: "https://manzmodz.blogspot.com/2026/02/reelshort.html", version: "2.3.0", hit: 0 },
+                { name: "ShortSky", kategori: "Drama China", icon: "https://i.ibb.co.com/GfbM9D3c/4bb6236b9881094eb1840a380e8bb42933914cca802207a9cefae481d114fade-200.jpg", desc: "Drama pendek China", link: "https://manzmodz.blogspot.com/2026/02/shortsky.html", version: "1.3.1", hit: 0 },
+                { name: "YouDrama", kategori: "Drama China", icon: "https://i.ibb.co/RG1P3Ny2/icon.webp", desc: "Streaming drama China", link: "https://manzmodz.blogspot.com/2026/02/youdrama.html", version: "2.8.4", hit: 0 },
                 // AI (2)
-                { name: "ChatGPT Clone", kategori: "AI", icon: "https://i.ibb.co/0R7ycrwT/20260223-143403.jpg", desc: "AI chatbot gratis", link: "https://manzmodz.blogspot.com/2026/02/chatgpt-clone.html", version: "1.8.2" },
-                { name: "Grok AI", kategori: "AI", icon: "https://i.ibb.co/gLjTzwqW/20260223-143428.jpg", desc: "AI dari xAI", link: "https://manzmodz.blogspot.com/2026/02/grok-ai.html", version: "1.2.7" },
+                { name: "ChatGPT Clone", kategori: "AI", icon: "https://i.ibb.co/0R7ycrwT/20260223-143403.jpg", desc: "AI chatbot gratis", link: "https://manzmodz.blogspot.com/2026/02/chatgpt-clone.html", version: "1.8.2", hit: 0 },
+                { name: "Grok AI", kategori: "AI", icon: "https://i.ibb.co/gLjTzwqW/20260223-143428.jpg", desc: "AI dari xAI", link: "https://manzmodz.blogspot.com/2026/02/grok-ai.html", version: "1.2.7", hit: 0 },
                 // Komik (1)
-                { name: "KomikIndo", kategori: "Komik", icon: "https://i.ibb.co/mrcngZkF/20260223-174835.jpg", desc: "Baca komik online", link: "https://manzmodz.blogspot.com/2026/02/komikindo.html", version: "3.2.1" },
+                { name: "KomikIndo", kategori: "Komik", icon: "https://i.ibb.co/mrcngZkF/20260223-174835.jpg", desc: "Baca komik online", link: "https://manzmodz.blogspot.com/2026/02/komikindo.html", version: "3.2.1", hit: 0 },
                 // Anime (6)
-                { name: "Anime Lovers", kategori: "Anime", icon: "https://i.ibb.co/0y39ZXXb/20260223-174829.jpg", desc: "Koleksi anime", link: "https://manzmodz.blogspot.com/2026/02/animelovers.html", version: "3.1.6" },
-                { name: "AnimeXNonton", kategori: "Anime", icon: "https://i.ibb.co.com/vxDLdKb9/20260223-174528.jpg", desc: "Streaming anime sub Indo", link: "https://manzmodz.blogspot.com/2026/02/animexnonton.html", version: "5.1.3" },
-                { name: "ANIMEKU", kategori: "Anime", icon: "https://i.ibb.co/G4jshqz8/icon.png", desc: "Nonton anime gratis", link: "https://manzmodz.blogspot.com/2026/02/animeku.html", version: "3.7.2" },
-                { name: "Cloudplay", kategori: "Anime", icon: "https://i.ibb.co.com/fYSQKpcJ/20260228-090331.jpg", desc: "Streaming anime & cloud gaming", link: "https://manzmodz.blogspot.com/2026/02/cloudplay.html", version: "1.5.2" },
-                { name: "Donghub", kategori: "Anime", icon: "https://i.ibb.co/FLr01LxG/20260223-174655.jpg", desc: "Nonton anime", link: "https://manzmodz.blogspot.com/2026/02/donghub.html", version: "2.4.8" },
-                { name: "Nonton Anime", kategori: "Anime", icon: "https://i.ibb.co.com/vxDLdKb9/20260223-174528.jpg", desc: "Streaming anime subtitle Indonesia", link: "https://manzmodz.blogspot.com/2026/02/nonton-anime.html", version: "1.0" },
+                { name: "Anime Lovers", kategori: "Anime", icon: "https://i.ibb.co/0y39ZXXb/20260223-174829.jpg", desc: "Koleksi anime", link: "https://manzmodz.blogspot.com/2026/02/animelovers.html", version: "3.1.6", hit: 0 },
+                { name: "AnimeXNonton", kategori: "Anime", icon: "https://i.ibb.co.com/vxDLdKb9/20260223-174528.jpg", desc: "Streaming anime sub Indo", link: "https://manzmodz.blogspot.com/2026/02/animexnonton.html", version: "5.1.3", hit: 0 },
+                { name: "ANIMEKU", kategori: "Anime", icon: "https://i.ibb.co/G4jshqz8/icon.png", desc: "Nonton anime gratis", link: "https://manzmodz.blogspot.com/2026/02/animeku.html", version: "3.7.2", hit: 0 },
+                { name: "Cloudplay", kategori: "Anime", icon: "https://i.ibb.co.com/fYSQKpcJ/20260228-090331.jpg", desc: "Streaming anime & cloud gaming", link: "https://manzmodz.blogspot.com/2026/02/cloudplay.html", version: "1.5.2", hit: 0 },
+                { name: "Donghub", kategori: "Anime", icon: "https://i.ibb.co/FLr01LxG/20260223-174655.jpg", desc: "Nonton anime", link: "https://manzmodz.blogspot.com/2026/02/donghub.html", version: "2.4.8", hit: 0 },
+                { name: "Nonton Anime", kategori: "Anime", icon: "https://i.ibb.co.com/vxDLdKb9/20260223-174528.jpg", desc: "Streaming anime subtitle Indonesia", link: "https://manzmodz.blogspot.com/2026/02/nonton-anime.html", version: "1.0", hit: 0 },
                 // Streaming Drama (5)
-                { name: "IMDb", kategori: "Streaming Drama", icon: "https://i.ibb.co/yz1y1pm/20260223-234842.webp", desc: "Rating film", link: "https://manzmodz.blogspot.com/2026/02/imdb.html", version: "5.2.1" },
-                { name: "LokLok", kategori: "Streaming Drama", icon: "https://i.ibb.co/fYjxmDxc/20260223-174713.jpg", desc: "Streaming drama", link: "https://manzmodz.blogspot.com/2026/02/loklok.html", version: "3.5.2" },
-                { name: "LokTv", kategori: "Streaming Drama", icon: "https://i.ibb.co/DHxcypvj/20260223-174735.webp", desc: "Drama Korea", link: "https://manzmodz.blogspot.com/2026/02/loktv.html", version: "4.0.3" },
-                { name: "MovieBox", kategori: "Streaming Drama", icon: "https://i.ibb.co/ns2GmxRJ/20260223-234822.jpg", desc: "Nonton film", link: "https://manzmodz.blogspot.com/2026/02/moviebox.html", version: "6.2.4" },
-                { name: "WeTv", kategori: "Streaming Drama", icon: "https://i.ibb.co/qFBksgfW/20260223-174752.png", desc: "Drama China & Korea", link: "https://manzmodz.blogspot.com/2026/02/wetv.html", version: "5.8.1" },
+                { name: "IMDb", kategori: "Streaming Drama", icon: "https://i.ibb.co/yz1y1pm/20260223-234842.webp", desc: "Rating film", link: "https://manzmodz.blogspot.com/2026/02/imdb.html", version: "5.2.1", hit: 0 },
+                { name: "LokLok", kategori: "Streaming Drama", icon: "https://i.ibb.co/fYjxmDxc/20260223-174713.jpg", desc: "Streaming drama", link: "https://manzmodz.blogspot.com/2026/02/loklok.html", version: "3.5.2", hit: 0 },
+                { name: "LokTv", kategori: "Streaming Drama", icon: "https://i.ibb.co/DHxcypvj/20260223-174735.webp", desc: "Drama Korea", link: "https://manzmodz.blogspot.com/2026/02/loktv.html", version: "4.0.3", hit: 0 },
+                { name: "MovieBox", kategori: "Streaming Drama", icon: "https://i.ibb.co/ns2GmxRJ/20260223-234822.jpg", desc: "Nonton film", link: "https://manzmodz.blogspot.com/2026/02/moviebox.html", version: "6.2.4", hit: 0 },
+                { name: "WeTv", kategori: "Streaming Drama", icon: "https://i.ibb.co/qFBksgfW/20260223-174752.png", desc: "Drama China & Korea", link: "https://manzmodz.blogspot.com/2026/02/wetv.html", version: "5.8.1", hit: 0 },
                 // Music (2)
-                { name: "Spotify", kategori: "Music", icon: "https://i.ibb.co/Zp6WwVMC/20260223-174518.jpg", desc: "Musik premium", link: "https://manzmodz.blogspot.com/2026/02/spotify.html", version: "8.8.96" },
-                { name: "Spotify Pro", kategori: "Music", icon: "https://i.ibb.co.com/Zp6WwVMC/20260223-174518.jpg", desc: "Spotify versi Pro Lite tanpa iklan", link: "https://manzmodz.blogspot.com/2026/03/spotify-pro.html", version: "Pro Lite" },
+                { name: "Spotify", kategori: "Music", icon: "https://i.ibb.co/Zp6WwVMC/20260223-174518.jpg", desc: "Musik premium", link: "https://manzmodz.blogspot.com/2026/02/spotify.html", version: "8.8.96", hit: 0 },
+                { name: "Spotify Pro", kategori: "Music", icon: "https://i.ibb.co.com/Zp6WwVMC/20260223-174518.jpg", desc: "Spotify versi Pro Lite tanpa iklan", link: "https://manzmodz.blogspot.com/2026/03/spotify-pro.html", version: "Pro Lite", hit: 0 },
                 // Video (1)
-                { name: "YouTube", kategori: "Video", icon: "https://i.ibb.co/3Ypw0dC9/20260225-111542.jpg", desc: "YouTube Premium", link: "https://manzmodz.blogspot.com/2026/02/youtube.html", version: "19.16.39" },
+                { name: "YouTube", kategori: "Video", icon: "https://i.ibb.co/3Ypw0dC9/20260225-111542.jpg", desc: "YouTube Premium", link: "https://manzmodz.blogspot.com/2026/02/youtube.html", version: "19.16.39", hit: 0 },
                 // Editing (10)
-                { name: "Alight Motion", kategori: "Editing", icon: "https://i.ibb.co/qLSdDvqk/20260223-143713.jpg", desc: "Motion graphic", link: "https://manzmodz.blogspot.com/2026/02/alight-motion.html", version: "5.0.7" },
-                { name: "CapCut", kategori: "Editing", icon: "https://i.ibb.co/YF9vc86g/20260223-143503.jpg", desc: "Edit video", link: "https://manzmodz.blogspot.com/2026/02/capcut.html", version: "16.9.0" },
-                { name: "Lightroom", kategori: "Editing", icon: "https://i.ibb.co/1tLnR7dT/bddd61f3f382b9c2adbc5a293cc4647664b906368df15dd7cc5ea754da229e1b-200.jpg", desc: "Edit foto profesional", link: "https://manzmodz.blogspot.com/2026/02/lightroom.html", version: "8.5.0" },
-                { name: "NodeVideo", kategori: "Editing", icon: "https://i.ibb.co/nMsd26cJ/a5b3d0acc507df65853df2017a51c4af82a6e3851ca7f0e6e5c4843c18580f6c-200.jpg", desc: "Edit video", link: "https://manzmodz.blogspot.com/2026/02/nodevideo.html", version: "3.2.7" },
-                { name: "PiscArt", kategori: "Editing", icon: "https://i.ibb.co/6RrgfzQq/20260223-174706.jpg", desc: "Edit foto & kolase", link: "https://manzmodz.blogspot.com/2026/02/piscart.html", version: "2.9.1" },
-                { name: "Pixellab", kategori: "Editing", icon: "https://i.ibb.co/6KQrYvC/20260227-114446.jpg", desc: "Desain grafis", link: "https://manzmodz.blogspot.com/2026/02/pixellab.html", version: "2.5.1" },
-                { name: "Remini", kategori: "Editing", icon: "https://i.ibb.co/YF2cZCdL/20260223-174549.jpg", desc: "Perbaiki kualitas foto", link: "https://manzmodz.blogspot.com/2026/02/remini.html", version: "4.2.1" },
-                { name: "Wink", kategori: "Editing", icon: "https://i.ibb.co/Dg8D07nN/20260223-143409.jpg", desc: "Edit foto", link: "https://manzmodz.blogspot.com/2026/02/wink.html", version: "4.3.5" },
-                { name: "Wink China", kategori: "Editing", icon: "https://i.ibb.co/Mx8n1W5d/20260227-114226.jpg", desc: "Edit foto versi China", link: "https://manzmodz.blogspot.com/2026/02/wink-chinese.html", version: "2.5.3" },
-                { name: "Winkit", kategori: "Editing", icon: "https://i.ibb.co.com/2YYC4Dqj/b15a08214ff89c0c7ef5f78f8fc6057f91ae68e65428114e7f0444571875a6fd-200.jpg", desc: "Edit foto dengan AI", link: "https://manzmodz.blogspot.com/2026/02/winkit.html", version: "2.3.1" },
+                { name: "Alight Motion", kategori: "Editing", icon: "https://i.ibb.co/qLSdDvqk/20260223-143713.jpg", desc: "Motion graphic", link: "https://manzmodz.blogspot.com/2026/02/alight-motion.html", version: "5.0.7", hit: 0 },
+                { name: "CapCut", kategori: "Editing", icon: "https://i.ibb.co/YF9vc86g/20260223-143503.jpg", desc: "Edit video", link: "https://manzmodz.blogspot.com/2026/02/capcut.html", version: "16.9.0", hit: 0 },
+                { name: "Lightroom", kategori: "Editing", icon: "https://i.ibb.co/1tLnR7dT/bddd61f3f382b9c2adbc5a293cc4647664b906368df15dd7cc5ea754da229e1b-200.jpg", desc: "Edit foto profesional", link: "https://manzmodz.blogspot.com/2026/02/lightroom.html", version: "8.5.0", hit: 0 },
+                { name: "NodeVideo", kategori: "Editing", icon: "https://i.ibb.co/nMsd26cJ/a5b3d0acc507df65853df2017a51c4af82a6e3851ca7f0e6e5c4843c18580f6c-200.jpg", desc: "Edit video", link: "https://manzmodz.blogspot.com/2026/02/nodevideo.html", version: "3.2.7", hit: 0 },
+                { name: "PiscArt", kategori: "Editing", icon: "https://i.ibb.co/6RrgfzQq/20260223-174706.jpg", desc: "Edit foto & kolase", link: "https://manzmodz.blogspot.com/2026/02/piscart.html", version: "2.9.1", hit: 0 },
+                { name: "Pixellab", kategori: "Editing", icon: "https://i.ibb.co/6KQrYvC/20260227-114446.jpg", desc: "Desain grafis", link: "https://manzmodz.blogspot.com/2026/02/pixellab.html", version: "2.5.1", hit: 0 },
+                { name: "Remini", kategori: "Editing", icon: "https://i.ibb.co/YF2cZCdL/20260223-174549.jpg", desc: "Perbaiki kualitas foto", link: "https://manzmodz.blogspot.com/2026/02/remini.html", version: "4.2.1", hit: 0 },
+                { name: "Wink", kategori: "Editing", icon: "https://i.ibb.co/Dg8D07nN/20260223-143409.jpg", desc: "Edit foto", link: "https://manzmodz.blogspot.com/2026/02/wink.html", version: "4.3.5", hit: 0 },
+                { name: "Wink China", kategori: "Editing", icon: "https://i.ibb.co/Mx8n1W5d/20260227-114226.jpg", desc: "Edit foto versi China", link: "https://manzmodz.blogspot.com/2026/02/wink-chinese.html", version: "2.5.3", hit: 0 },
+                { name: "Winkit", kategori: "Editing", icon: "https://i.ibb.co.com/2YYC4Dqj/b15a08214ff89c0c7ef5f78f8fc6057f91ae68e65428114e7f0444571875a6fd-200.jpg", desc: "Edit foto dengan AI", link: "https://manzmodz.blogspot.com/2026/02/winkit.html", version: "2.3.1", hit: 0 },
                 // Islami (2)
-                { name: "Muslim Pro", kategori: "Islami", icon: "https://i.ibb.co.com/7tYSshd3/f6d7c304820247fcfd25be1278e72c564e3f2aa8dad8b8f12259ff70b78c3621-200.jpg", desc: "Jadwal sholat, Al-Qur'an", link: "https://manzmodz.blogspot.com/2026/02/muslim-pro.html", version: "12.5.1" },
-                { name: "We Muslim", kategori: "Islami", icon: "https://i.ibb.co.com/0j9gtW4c/6d514ea348745c247231b2de31893db77d2f6f72fce0bd05e12a2a44483eb1f3-200.jpg", desc: "Doa harian, komunitas", link: "https://manzmodz.blogspot.com/2026/02/wemuslim.html", version: "5.2.3" },
+                { name: "Muslim Pro", kategori: "Islami", icon: "https://i.ibb.co.com/7tYSshd3/f6d7c304820247fcfd25be1278e72c564e3f2aa8dad8b8f12259ff70b78c3621-200.jpg", desc: "Jadwal sholat, Al-Qur'an", link: "https://manzmodz.blogspot.com/2026/02/muslim-pro.html", version: "12.5.1", hit: 0 },
+                { name: "We Muslim", kategori: "Islami", icon: "https://i.ibb.co.com/0j9gtW4c/6d514ea348745c247231b2de31893db77d2f6f72fce0bd05e12a2a44483eb1f3-200.jpg", desc: "Doa harian, komunitas", link: "https://manzmodz.blogspot.com/2026/02/wemuslim.html", version: "5.2.3", hit: 0 },
                 // VPN (1)
-                { name: "Vpn Super Proxy", kategori: "VPN", icon: "https://i.ibb.co/4wHQT7Qw/10db31b65c8d09ac1d719e49ee891ce8db3179283858330aefcc22c291657b43-200.jpg", desc: "VPN gratis", link: "https://manzmodz.blogspot.com/2026/02/vpn-super-proxy.html", version: "2.8.1" },
+                { name: "Vpn Super Proxy", kategori: "VPN", icon: "https://i.ibb.co/4wHQT7Qw/10db31b65c8d09ac1d719e49ee891ce8db3179283858330aefcc22c291657b43-200.jpg", desc: "VPN gratis", link: "https://manzmodz.blogspot.com/2026/02/vpn-super-proxy.html", version: "2.8.1", hit: 0 },
                 // Alat (1) - TeraBox
-                { name: "TeraBox", kategori: "Alat", icon: "https://i.ibb.co.com/LdnqbHc1/abfd9d28f21f9f8eee8419e34f4c881c16677c4a2903a466d16033f132c21d44-200.jpg", desc: "Cloud storage gratis kapasitas besar", link: "https://manzmodz.blogspot.com/2026/03/terabox.html", version: "1.0" }
+                { name: "TeraBox", kategori: "Alat", icon: "https://i.ibb.co.com/LdnqbHc1/abfd9d28f21f9f8eee8419e34f4c881c16677c4a2903a466d16033f132c21d44-200.jpg", desc: "Cloud storage gratis kapasitas besar", link: "https://manzmodz.blogspot.com/2026/03/terabox.html", version: "1.0", hit: 0 }
             ];
 
-            document.getElementById('totalApps').textContent = apps.length;
-
+            // Hitung jumlah per kategori
             const kategoriCount = {};
             apps.forEach(app => kategoriCount[app.kategori] = (kategoriCount[app.kategori] || 0) + 1);
             const kategoriList = [...new Set(apps.map(app => app.kategori))].sort();
@@ -503,6 +532,150 @@
                 sliderGrid.appendChild(card);
             });
 
+            // Render Featured Apps (5 aplikasi dengan hit tertinggi, default awal)
+            function renderFeatured() {
+                const featuredGrid = document.getElementById('featuredGrid');
+                featuredGrid.innerHTML = '';
+                const featured = [...apps].sort((a,b) => b.hit - a.hit).slice(0, 5);
+                featured.forEach(app => {
+                    const card = document.createElement('div');
+                    card.className = 'featured-card';
+                    card.onclick = () => window.open(app.link, '_blank');
+                    card.innerHTML = `
+                        <img src="${app.icon}" alt="${app.name}" class="featured-icon">
+                        <div class="featured-info">
+                            <h4>${app.name}</h4>
+                            <p>${app.desc.substring(0, 60)}...</p>
+                        </div>
+                    `;
+                    featuredGrid.appendChild(card);
+                });
+            }
+
+            // Fungsi untuk memperbarui hit counter (disimpan di localStorage)
+            function incrementHit(appName) {
+                const hits = JSON.parse(localStorage.getItem('manzHits')) || {};
+                hits[appName] = (hits[appName] || 0) + 1;
+                localStorage.setItem('manzHits', JSON.stringify(hits));
+                // Update data di memory
+                const app = apps.find(a => a.name === appName);
+                if (app) app.hit = hits[appName];
+                // Render ulang featured dan grid
+                renderFeatured();
+                filterApps(currentKategori, currentSearch, currentSort);
+            }
+
+            // Helper buat card (dengan hit counter)
+            function createAppCard(app) {
+                const card = document.createElement('div');
+                card.className = 'app-card';
+                card.onclick = (e) => {
+                    // Jangan increment jika klik di tombol download atau meta (agar tidak double)
+                    if (!e.target.closest('.app-meta')) {
+                        incrementHit(app.name);
+                        window.open(app.link, '_blank');
+                    }
+                };
+                card.innerHTML = `
+                    <div class="app-card-header">
+                        <img src="${app.icon}" alt="${app.name}" class="app-icon" onerror="this.src='https://via.placeholder.com/60?text=Error'">
+                        <div>
+                            <div class="app-name">${app.name}</div>
+                            <span class="app-category">${app.kategori}</span>
+                        </div>
+                    </div>
+                    <div class="app-desc">${app.desc}</div>
+                    <div class="app-meta">
+                        <span class="app-version"><i class="fas fa-code-branch"></i> ${app.version}</span>
+                        <span class="hit-counter"><i class="fas fa-eye"></i> ${app.hit}</span>
+                        <span class="app-download"><i class="fas fa-download"></i> Download</span>
+                    </div>
+                `;
+                return card;
+            }
+
+            // Filter, search, sort
+            let currentKategori = null;
+            let currentSearch = '';
+            let currentSort = 'name';
+
+            function filterApps(kategori = null, searchTerm = '', sortBy = currentSort) {
+                currentKategori = kategori;
+                currentSearch = searchTerm;
+                currentSort = sortBy;
+
+                let filtered = apps.filter(app => {
+                    const matchKategori = kategori ? app.kategori === kategori : true;
+                    const matchSearch = searchTerm === '' ? true :
+                        app.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                        app.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                        app.kategori.toLowerCase().includes(searchTerm.toLowerCase());
+                    return matchKategori && matchSearch;
+                });
+
+                // Sorting
+                if (sortBy === 'name') {
+                    filtered.sort((a, b) => a.name.localeCompare(b.name));
+                } else if (sortBy === 'nameDesc') {
+                    filtered.sort((a, b) => b.name.localeCompare(a.name));
+                } else if (sortBy === 'version') {
+                    filtered.sort((a, b) => {
+                        // Simple version compare (string length fallback)
+                        const verA = a.version.replace(/[^0-9.]/g, '');
+                        const verB = b.version.replace(/[^0-9.]/g, '');
+                        return verB.localeCompare(verA, undefined, { numeric: true });
+                    });
+                } else if (sortBy === 'hit') {
+                    filtered.sort((a, b) => b.hit - a.hit);
+                }
+
+                document.getElementById('allAppsTitle').textContent = 
+                    searchTerm ? `Hasil Pencarian: "${searchTerm}" (${filtered.length})` :
+                    kategori ? `Kategori: ${kategori} (${filtered.length})` :
+                    `Semua Aplikasi (${filtered.length})`;
+
+                const grid = document.getElementById('appsGrid');
+                grid.innerHTML = '';
+                if (filtered.length === 0) {
+                    grid.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:50px; color:#888;">Tidak ada aplikasi ditemukan</div>';
+                } else {
+                    filtered.forEach(app => grid.appendChild(createAppCard(app)));
+                }
+            }
+
+            // View toggle
+            const gridViewBtn = document.getElementById('gridViewBtn');
+            const listViewBtn = document.getElementById('listViewBtn');
+            const appsGrid = document.getElementById('appsGrid');
+
+            gridViewBtn.addEventListener('click', () => {
+                appsGrid.classList.remove('list-view');
+                gridViewBtn.classList.add('active');
+                listViewBtn.classList.remove('active');
+            });
+            listViewBtn.addEventListener('click', () => {
+                appsGrid.classList.add('list-view');
+                listViewBtn.classList.add('active');
+                gridViewBtn.classList.remove('active');
+            });
+
+            // Sort select
+            const sortSelect = document.getElementById('sortSelect');
+            sortSelect.addEventListener('change', () => {
+                filterApps(currentKategori, currentSearch, sortSelect.value);
+            });
+
+            // Inisialisasi hits dari localStorage
+            const storedHits = JSON.parse(localStorage.getItem('manzHits')) || {};
+            apps.forEach(app => {
+                if (storedHits[app.name]) app.hit = storedHits[app.name];
+            });
+
+            // Render awal
+            filterApps();
+            renderKategori(null);
+            renderFeatured();
+
             // Footer kategori
             const footerKategori = document.getElementById('footerKategori');
             kategoriList.slice(0, 5).forEach(kat => {
@@ -526,64 +699,55 @@
                 }
             }
 
-            function createAppCard(app) {
-                const card = document.createElement('div');
-                card.className = 'app-card';
-                card.onclick = () => window.open(app.link, '_blank');
-                card.innerHTML = `
-                    <div class="app-card-header">
-                        <img src="${app.icon}" alt="${app.name}" class="app-icon" onerror="this.src='https://via.placeholder.com/60?text=Error'">
-                        <div>
-                            <div class="app-name">${app.name}</div>
-                            <span class="app-category">${app.kategori}</span>
-                        </div>
-                    </div>
-                    <div class="app-desc">${app.desc}</div>
-                    <div class="app-meta">
-                        <span class="app-version"><i class="fas fa-code-branch"></i> ${app.version}</span>
-                        <span class="app-download"><i class="fas fa-download"></i> Download</span>
-                    </div>
-                `;
-                return card;
-            }
-
-            let currentKategori = null;
-            let currentSearch = '';
-
-            function filterApps(kategori = null, searchTerm = '') {
-                currentKategori = kategori;
-                currentSearch = searchTerm;
-                const filtered = apps.filter(app => {
-                    const matchKategori = kategori ? app.kategori === kategori : true;
-                    const matchSearch = searchTerm === '' ? true :
-                        app.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                        app.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                        app.kategori.toLowerCase().includes(searchTerm.toLowerCase());
-                    return matchKategori && matchSearch;
-                }).sort((a, b) => a.name.localeCompare(b.name));
-
-                document.getElementById('allAppsTitle').textContent = 
-                    searchTerm ? `Hasil Pencarian: "${searchTerm}" (${filtered.length})` :
-                    kategori ? `Kategori: ${kategori} (${filtered.length})` :
-                    `Semua Aplikasi (${filtered.length})`;
-
-                const grid = document.getElementById('appsGrid');
-                grid.innerHTML = '';
-                if (filtered.length === 0) {
-                    grid.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:50px; color:#888;">Tidak ada aplikasi ditemukan</div>';
-                } else {
-                    filtered.forEach(app => grid.appendChild(createAppCard(app)));
-                }
-            }
-
-            filterApps();
-            renderKategori(null);
-
+            // Search
             const searchInput = document.getElementById('searchInput');
             const searchButton = document.getElementById('searchButton');
-            function doSearch() { filterApps(currentKategori, searchInput.value.trim()); }
+            function doSearch() { filterApps(currentKategori, searchInput.value.trim(), sortSelect.value); }
             searchButton.addEventListener('click', doSearch);
             searchInput.addEventListener('keyup', e => { if (e.key === 'Enter') doSearch(); });
+        });
+
+        // ========== KOMENTAR (Fitur 9) ==========
+        function tambahKomentar() {
+            const nama = document.getElementById('namaKomentar').value.trim();
+            const isi = document.getElementById('isiKomentar').value.trim();
+            if (!nama || !isi) return alert('Nama dan komentar harus diisi!');
+
+            const komentar = JSON.parse(localStorage.getItem('manzKomentar')) || [];
+            komentar.push({ nama, isi, waktu: new Date().toLocaleString() });
+            localStorage.setItem('manzKomentar', JSON.stringify(komentar));
+            tampilkanKomentar();
+            document.getElementById('namaKomentar').value = '';
+            document.getElementById('isiKomentar').value = '';
+        }
+
+        function tampilkanKomentar() {
+            const list = document.getElementById('komentarList');
+            const komentar = JSON.parse(localStorage.getItem('manzKomentar')) || [];
+            list.innerHTML = '';
+            komentar.slice(-10).reverse().forEach(k => {
+                const div = document.createElement('div');
+                div.className = 'komentar-item';
+                div.innerHTML = `<div class="komentar-nama">${k.nama}</div><div class="komentar-teks">${k.isi}</div><div class="komentar-waktu">${k.waktu}</div>`;
+                list.appendChild(div);
+            });
+        }
+
+        // Panggil tampilkan komentar saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', tampilkanKomentar);
+
+        // ========== REQUEST APK (Fitur 11) ==========
+        document.getElementById('requestForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nama = document.getElementById('requestNama').value.trim();
+            const keterangan = document.getElementById('requestKeterangan').value.trim();
+            if (!nama) return alert('Nama aplikasi harus diisi!');
+            // Simpan ke localStorage atau kirim ke server (simulasi)
+            const requests = JSON.parse(localStorage.getItem('manzRequests')) || [];
+            requests.push({ nama, keterangan, waktu: new Date().toLocaleString() });
+            localStorage.setItem('manzRequests', JSON.stringify(requests));
+            alert('Request berhasil dikirim! Terima kasih.');
+            document.getElementById('requestForm').reset();
         });
     </script>
 </body>
