@@ -11,7 +11,7 @@
         body { background: #0f0f0f; color: #e0e0e0; }
         .header {
             background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-            padding: 15px 20px;
+            padding: 12px 20px;
             border-bottom: 2px solid #ff4fd8;
             position: relative;
         }
@@ -22,44 +22,45 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 12px;
         }
         .logo h1 { 
             color: #ff4fd8; 
-            font-size: 1.8rem; 
+            font-size: 1.6rem; 
             line-height: 1.2;
         }
         .logo span { 
             color: #9d4dff; 
-            font-size: 0.9rem; 
+            font-size: 0.8rem; 
             display: block; 
         }
         .manz-logo {
-            position: absolute; top: 10px; right: 20px; width: 50px; height: 50px; border-radius: 50%;
-            overflow: hidden; border: 2px solid #ff4fd8; box-shadow: 0 0 15px rgba(255,79,216,0.5); z-index: 10;
+            position: absolute; top: 8px; right: 20px; width: 40px; height: 40px; border-radius: 50%;
+            overflow: hidden; border: 2px solid #ff4fd8; box-shadow: 0 0 12px rgba(255,79,216,0.5); z-index: 10;
         }
         .manz-logo img { width: 100%; height: 100%; object-fit: cover; }
         .search-box {
-            flex: 0 1 250px; display: flex; background: #252525; border-radius: 30px; padding: 3px; border: 1px solid #333;
-            margin-left: auto; margin-right: 80px;
+            flex: 0 1 240px; display: flex; background: #252525; border-radius: 30px; padding: 3px; border: 1px solid #333;
+            margin-left: auto;
+            margin-right: 70px; /* ruang untuk logo */
         }
         .search-box input {
-            flex: 1; background: transparent; border: none; padding: 6px 12px; color: white; font-size: 0.85rem; outline: none;
+            flex: 1; background: transparent; border: none; padding: 6px 10px; color: white; font-size: 0.8rem; outline: none;
         }
         .search-box button {
-            background: #ff4fd8; border: none; color: white; padding: 0 12px; border-radius: 30px;
-            cursor: pointer; font-weight: 500; font-size: 0.85rem;
+            background: #ff4fd8; border: none; color: white; padding: 0 10px; border-radius: 30px;
+            cursor: pointer; font-weight: 500; font-size: 0.8rem;
         }
-        .header-stats { color: #888; font-size: 0.9rem; }
+        .header-stats { color: #888; font-size: 0.85rem; }
 
         .running-text {
             width: 100%; overflow: hidden; background: linear-gradient(45deg, #ff4fd8, #9d4dff);
-            color: white; padding: 12px 0; white-space: nowrap; box-shadow: 0 2px 10px rgba(255,79,216,0.3);
-            margin-bottom: 20px;
+            color: white; padding: 10px 0; white-space: nowrap; box-shadow: 0 2px 10px rgba(255,79,216,0.3);
+            margin-bottom: 18px;
         }
         .running-text p {
             display: inline-block; animation: scroll-left 18s linear infinite;
-            font-weight: 600; font-size: 1.1rem; letter-spacing: 1px;
+            font-weight: 600; font-size: 1rem; letter-spacing: 1px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
         @keyframes scroll-left {
@@ -69,175 +70,182 @@
 
         .main-container { max-width: 1400px; margin: 30px auto; padding: 0 20px; display: flex; gap: 30px; }
 
-        .sidebar { width: 260px; flex-shrink: 0; }
+        .sidebar { width: 250px; flex-shrink: 0; }
         .kategori-box {
-            background: #1a1a1a; border-radius: 20px; padding: 20px; border: 1px solid #333;
+            background: #1a1a1a; border-radius: 20px; padding: 18px; border: 1px solid #333;
             position: sticky; top: 20px;
         }
-        .kategori-box h3 { color: #ff9efc; margin-bottom: 20px; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
-        .kategori-list { list-style: none; max-height: 400px; overflow-y: auto; padding-right: 5px; }
-        .kategori-item { margin-bottom: 10px; }
+        .kategori-box h3 { color: #ff9efc; margin-bottom: 18px; font-size: 1.1rem; display: flex; align-items: center; gap: 8px; }
+        .kategori-list { list-style: none; max-height: 380px; overflow-y: auto; padding-right: 5px; }
+        .kategori-item { margin-bottom: 8px; }
         .kategori-link {
-            color: #aaa; text-decoration: none; display: flex; align-items: center; gap: 12px; padding: 10px 15px;
-            border-radius: 12px; transition: 0.3s; font-size: 0.95rem; cursor: pointer; border: none; background: none; width: 100%; text-align: left;
+            color: #aaa; text-decoration: none; display: flex; align-items: center; gap: 10px; padding: 8px 12px;
+            border-radius: 10px; transition: 0.3s; font-size: 0.9rem; cursor: pointer; border: none; background: none; width: 100%; text-align: left;
         }
-        .kategori-link i { width: 20px; color: #ff4fd8; }
+        .kategori-link i { width: 18px; color: #ff4fd8; }
         .kategori-link:hover { background: #252525; color: white; transform: translateX(5px); }
         .kategori-link.active { background: #ff4fd8; color: white; }
         .kategori-link.active i { color: white; }
         .kategori-count {
-            margin-left: auto; background: #333; padding: 2px 8px; border-radius: 20px; font-size: 0.8rem; color: #ccc;
+            margin-left: auto; background: #333; padding: 2px 6px; border-radius: 20px; font-size: 0.75rem; color: #ccc;
         }
 
         .content { flex: 1; }
 
+        /* Karakter besar di tengah - tanpa border dan shadow */
+        .character-large {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .character-large img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            /* border dan shadow dihapus agar menyatu dengan background */
+            border: none;
+            box-shadow: none;
+        }
+
         .view-toggle {
-            display: flex; justify-content: flex-end; margin-bottom: 20px; gap: 10px;
+            display: flex; justify-content: flex-end; margin-bottom: 18px; gap: 8px;
         }
         .view-btn {
-            background: #1a1a1a; border: 1px solid #333; color: #aaa; padding: 8px 16px;
-            border-radius: 30px; cursor: pointer; transition: 0.3s; font-size: 0.9rem;
+            background: #1a1a1a; border: 1px solid #333; color: #aaa; padding: 6px 14px;
+            border-radius: 30px; cursor: pointer; transition: 0.3s; font-size: 0.85rem;
         }
         .view-btn.active { background: #ff4fd8; color: white; border-color: #ff4fd8; }
         .view-btn i { margin-right: 5px; }
 
-        .featured-section { margin-bottom: 40px; }
+        .featured-section { margin-bottom: 35px; }
         .featured-title {
-            font-size: 1.5rem; font-weight: 600; margin-bottom: 20px; color: white;
-            border-left: 5px solid #ff4fd8; padding-left: 15px;
+            font-size: 1.4rem; font-weight: 600; margin-bottom: 18px; color: white;
+            border-left: 5px solid #ff4fd8; padding-left: 12px;
         }
         .featured-grid {
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px;
         }
         .featured-card {
-            background: linear-gradient(145deg, #252525, #1a1a1a); border-radius: 20px; padding: 20px;
-            border: 1px solid #ff4fd8; cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 15px;
+            background: linear-gradient(145deg, #252525, #1a1a1a); border-radius: 18px; padding: 18px;
+            border: 1px solid #ff4fd8; cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 12px;
         }
         .featured-card:hover {
             transform: translateY(-5px); box-shadow: 0 10px 30px rgba(255,79,216,0.3);
         }
-        .featured-icon { width: 60px; height: 60px; border-radius: 18px; border: 2px solid #ff4fd8; object-fit: cover; }
-        .featured-info h4 { color: white; font-size: 1.2rem; margin-bottom: 5px; }
-        .featured-info p { color: #aaa; font-size: 0.85rem; }
+        .featured-icon { width: 55px; height: 55px; border-radius: 16px; border: 2px solid #ff4fd8; object-fit: cover; }
+        .featured-info h4 { color: white; font-size: 1.1rem; margin-bottom: 5px; }
+        .featured-info p { color: #aaa; font-size: 0.8rem; }
 
-        .slider-container { margin-bottom: 40px; }
-        .slider-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 15px; color: #ff9efc; display: flex; align-items: center; gap: 10px; }
-        .slider-wrapper { overflow-x: auto; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding-bottom: 10px; }
-        .slider-wrapper::-webkit-scrollbar { height: 6px; }
+        .slider-container { margin-bottom: 35px; }
+        .slider-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 12px; color: #ff9efc; display: flex; align-items: center; gap: 8px; }
+        .slider-wrapper { overflow-x: auto; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding-bottom: 8px; }
+        .slider-wrapper::-webkit-scrollbar { height: 5px; }
         .slider-wrapper::-webkit-scrollbar-track { background: #1a1a1a; border-radius: 10px; }
         .slider-wrapper::-webkit-scrollbar-thumb { background: #ff4fd8; border-radius: 10px; }
-        .slider-grid { display: flex; gap: 20px; width: max-content; }
+        .slider-grid { display: flex; gap: 18px; width: max-content; }
         .slider-card {
-            background: #1a1a1a; border-radius: 20px; padding: 15px; border: 1px solid #333;
-            cursor: pointer; transition: 0.3s; width: 200px; flex-shrink: 0;
+            background: #1a1a1a; border-radius: 18px; padding: 12px; border: 1px solid #333;
+            cursor: pointer; transition: 0.3s; width: 180px; flex-shrink: 0;
         }
         .slider-card:hover { border-color: #ff4fd8; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(255,79,216,0.2); }
-        .slider-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-        .slider-icon { width: 50px; height: 50px; border-radius: 15px; border: 2px solid #ff4fd8; object-fit: cover; }
-        .slider-name { font-weight: 600; color: white; font-size: 1rem; }
-        .slider-desc { color: #aaa; font-size: 0.8rem; line-height: 1.4; margin-bottom: 10px; }
+        .slider-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+        .slider-icon { width: 45px; height: 45px; border-radius: 12px; border: 2px solid #ff4fd8; object-fit: cover; }
+        .slider-name { font-weight: 600; color: white; font-size: 0.95rem; }
+        .slider-desc { color: #aaa; font-size: 0.75rem; line-height: 1.3; margin-bottom: 8px; }
 
         .filter-bar {
-            display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; align-items: center;
+            display: flex; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; align-items: center;
         }
         .filter-select {
-            background: #252525; border: 1px solid #333; color: white; padding: 8px 16px;
-            border-radius: 30px; font-size: 0.9rem; cursor: pointer; outline: none;
+            background: #252525; border: 1px solid #333; color: white; padding: 6px 14px;
+            border-radius: 30px; font-size: 0.85rem; cursor: pointer; outline: none;
         }
         .filter-select option { background: #1a1a1a; }
 
         .apps-grid {
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 25px; margin-bottom: 40px;
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 22px; margin-bottom: 35px;
             transition: all 0.3s;
         }
         .apps-grid.list-view {
-            grid-template-columns: 1fr; gap: 15px;
+            grid-template-columns: 1fr; gap: 12px;
         }
         .app-card {
-            background: #1a1a1a; border-radius: 20px; padding: 20px; border: 1px solid #333;
+            background: #1a1a1a; border-radius: 18px; padding: 18px; border: 1px solid #333;
             cursor: pointer; transition: 0.3s; display: flex; flex-direction: column;
         }
         .list-view .app-card {
-            flex-direction: row; align-items: center; gap: 20px; padding: 15px 20px;
+            flex-direction: row; align-items: center; gap: 18px; padding: 12px 18px;
         }
         .app-card:hover { border-color: #ff4fd8; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(255,79,216,0.2); }
         .list-view .app-card:hover { transform: translateY(-2px); }
-        .app-card-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
-        .list-view .app-card-header { margin-bottom: 0; width: 250px; }
-        .app-icon { width: 60px; height: 60px; border-radius: 18px; border: 2px solid #ff4fd8; object-fit: cover; }
-        .app-name { font-weight: 600; color: white; font-size: 1.1rem; }
+        .app-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .list-view .app-card-header { margin-bottom: 0; width: 220px; }
+        .app-icon { width: 55px; height: 55px; border-radius: 16px; border: 2px solid #ff4fd8; object-fit: cover; }
+        .app-name { font-weight: 600; color: white; font-size: 1rem; }
         .app-category {
-            color: #ff9efc; font-size: 0.75rem; background: #252525; padding: 3px 10px;
-            border-radius: 20px; display: inline-block; margin-top: 5px;
+            color: #ff9efc; font-size: 0.7rem; background: #252525; padding: 3px 8px;
+            border-radius: 20px; display: inline-block; margin-top: 4px;
         }
-        .app-desc { color: #aaa; font-size: 0.9rem; line-height: 1.5; margin-bottom: 15px; flex: 1; }
-        .list-view .app-desc { margin-bottom: 0; margin-right: 20px; }
+        .app-desc { color: #aaa; font-size: 0.85rem; line-height: 1.4; margin-bottom: 12px; flex: 1; }
+        .list-view .app-desc { margin-bottom: 0; margin-right: 18px; }
         .app-meta {
             display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #333;
-            padding-top: 12px; font-size: 0.8rem;
+            padding-top: 10px; font-size: 0.75rem;
         }
-        .list-view .app-meta { border-top: none; padding-top: 0; min-width: 200px; }
-        .app-version { background: #252525; padding: 4px 12px; border-radius: 20px; color: #ccc; }
-        .hit-counter { color: #ff9efc; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 3px; }
+        .list-view .app-meta { border-top: none; padding-top: 0; min-width: 180px; }
+        .app-version { background: #252525; padding: 3px 10px; border-radius: 20px; color: #ccc; }
+        .hit-counter { color: #ff9efc; font-size: 0.75rem; display: inline-flex; align-items: center; gap: 3px; }
         .app-download { color: #ff4fd8; font-weight: 600; }
 
-        .ads-container {
-            margin: 30px 0; padding: 20px; background: #1a1a1a; border-radius: 20px;
-            text-align: center; border: 1px dashed #ff4fd8;
-        }
-
         .komentar-section, .request-section {
-            background: #1a1a1a; border-radius: 20px; padding: 20px; margin-top: 40px; border: 1px solid #333;
+            background: #1a1a1a; border-radius: 20px; padding: 18px; margin-top: 35px; border: 1px solid #333;
         }
-        .komentar-section h3, .request-section h3 { color: #ff9efc; margin-bottom: 20px; }
-        .komentar-form, .request-form { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        .komentar-section h3, .request-section h3 { color: #ff9efc; margin-bottom: 18px; font-size: 1.2rem; }
+        .komentar-form, .request-form { display: flex; gap: 10px; margin-bottom: 18px; flex-wrap: wrap; }
         .komentar-form input, .request-form input, .request-form textarea {
-            background: #252525; border: 1px solid #333; padding: 10px 15px;
-            border-radius: 30px; color: white; outline: none; flex: 1;
+            background: #252525; border: 1px solid #333; padding: 8px 12px;
+            border-radius: 25px; color: white; outline: none; flex: 1;
         }
-        .request-form textarea { min-height: 80px; border-radius: 20px; }
+        .request-form textarea { min-height: 70px; border-radius: 18px; }
         .komentar-form button, .request-form button {
-            background: #ff4fd8; border: none; color: white; padding: 10px 25px; border-radius: 30px;
-            cursor: pointer; font-weight: 500;
+            background: #ff4fd8; border: none; color: white; padding: 8px 20px; border-radius: 30px;
+            cursor: pointer; font-weight: 500; font-size: 0.9rem;
         }
-        .komentar-list, .request-list { max-height: 300px; overflow-y: auto; padding-right: 10px; }
+        .komentar-list, .request-list { max-height: 280px; overflow-y: auto; padding-right: 8px; }
         .komentar-item, .request-item {
-            background: #252525; border-radius: 15px; padding: 15px; margin-bottom: 10px;
+            background: #252525; border-radius: 12px; padding: 12px; margin-bottom: 10px;
             border-left: 3px solid #ff4fd8;
         }
-        .komentar-nama, .request-nama { color: #ff9efc; font-weight: 600; margin-bottom: 5px; }
-        .komentar-teks, .request-teks { color: #ddd; font-size: 0.9rem; }
+        .komentar-nama, .request-nama { color: #ff9efc; font-weight: 600; margin-bottom: 5px; font-size: 0.9rem; }
+        .komentar-teks, .request-teks { color: #ddd; font-size: 0.85rem; }
         .komentar-waktu, .request-waktu { color: #888; font-size: 0.7rem; margin-top: 5px; }
 
         .footer {
-            background: #0a0a0a; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #333;
+            background: #0a0a0a; padding: 35px 20px; margin-top: 50px; border-top: 1px solid #333;
         }
         .footer-container {
             max-width: 1400px; margin: 0 auto; display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 25px;
         }
-        .footer-col h4 { color: #ff9efc; margin-bottom: 20px; }
+        .footer-col h4 { color: #ff9efc; margin-bottom: 18px; font-size: 1rem; }
         .footer-col ul { list-style: none; }
-        .footer-col li { margin-bottom: 10px; }
-        .footer-col a { color: #aaa; text-decoration: none; transition: 0.3s; cursor: pointer; }
+        .footer-col li { margin-bottom: 8px; }
+        .footer-col a { color: #aaa; text-decoration: none; transition: 0.3s; cursor: pointer; font-size: 0.9rem; }
         .footer-col a:hover { color: #ff4fd8; }
-        .footer-bottom { text-align: center; color: #666; padding-top: 30px; margin-top: 30px; border-top: 1px solid #333; }
+        .footer-bottom { text-align: center; color: #666; padding-top: 25px; margin-top: 25px; border-top: 1px solid #333; }
 
         @media (max-width: 900px) {
             .main-container { flex-direction: column; }
             .sidebar { width: 100%; }
             .kategori-box { position: static; }
-            .kategori-list { display: flex; flex-wrap: wrap; gap: 10px; max-height: none; }
+            .kategori-list { display: flex; flex-wrap: wrap; gap: 8px; max-height: none; }
             .kategori-item { width: auto; }
             .search-box { margin-right: 0; flex: 1; }
-            .manz-logo { position: relative; top: auto; right: auto; margin-top: 10px; }
+            .manz-logo { position: relative; top: auto; right: auto; margin-top: 8px; }
             .header-container { flex-direction: column; align-items: flex-start; }
             .list-view .app-card { flex-direction: column; align-items: flex-start; }
             .list-view .app-card-header { width: auto; }
         }
     </style>
-    <!-- AdSense placeholder – GANTI DENGAN KODE ASLI ANDA -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"></script>
 </head>
 <body>
     <div class="header">
@@ -251,8 +259,9 @@
                 <button id="searchButton"><i class="fas fa-search"></i></button>
             </div>
             <div class="header-stats">
-                <i class="fas fa-box"></i> <span id="totalApps">59</span> APK
+                <i class="fas fa-box"></i> <span id="totalApps">48</span> APK
             </div>
+            <!-- Logo ManzMods -->
             <div class="manz-logo">
                 <img src="https://i.ibb.co.com/mCdXYPt8/ai-repair-20260220002234645.jpg" alt="ManzMods Logo">
             </div>
@@ -263,37 +272,22 @@
         <p>ManzModz Memberikan Aplikasi 100% Aman, Dan Terimakasih Yang Sudah Support🎉🎉</p>
     </div>
 
-    <!-- Ads Header -->
-    <div class="ads-container">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-             data-ad-slot="XXXXXXXXXX"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
     <div class="main-container">
         <!-- Sidebar Kategori -->
         <div class="sidebar">
             <div class="kategori-box">
                 <h3><i class="fas fa-filter"></i> Kategori</h3>
                 <ul class="kategori-list" id="kategoriList"></ul>
-                <!-- Ads Sidebar -->
-                <div style="margin-top:20px;">
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                         data-ad-slot="YYYYYYYYYY"
-                         data-ad-format="rectangle"></ins>
-                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-                </div>
             </div>
         </div>
 
         <!-- Konten Utama -->
         <div class="content">
+            <!-- Karakter besar di tengah - tanpa border dan shadow -->
+            <div class="character-large">
+                <img src="https://i.ibb.co.com/MygWmLPh/quality-restoration-20260301221316901.png" alt="Karakter ManzModz" onerror="this.src='https://via.placeholder.com/300x300?text=Karakter'">
+            </div>
+
             <!-- View Toggle -->
             <div class="view-toggle">
                 <button class="view-btn active" id="gridViewBtn"><i class="fas fa-th"></i> Grid</button>
@@ -327,7 +321,7 @@
                 </select>
             </div>
 
-            <h2 class="section-title" id="allAppsTitle">Semua Aplikasi (59)</h2>
+            <h2 class="section-title" id="allAppsTitle">Semua Aplikasi (48)</h2>
             <div class="apps-grid" id="appsGrid"></div>
 
             <!-- Komentar -->
@@ -350,16 +344,6 @@
                     <button type="submit">Kirim Request</button>
                 </form>
                 <div class="request-list" id="requestList"></div>
-            </div>
-
-            <!-- Ads Footer -->
-            <div class="ads-container">
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                     data-ad-slot="ZZZZZZZZZZ"
-                     data-ad-format="auto"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
             </div>
         </div>
     </div>
@@ -392,7 +376,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Data aplikasi (59 APK)
+            // Data aplikasi (48 APK sesuai screenshot)
             const apps = [
                 // Drama China (18)
                 { name: "Cool Scene Drama", kategori: "Drama China", icon: "https://i.ibb.co.com/JWnKP7rn/f58f7d1a7bd003407536a1514c07dea7-icon.png", desc: "Koleksi drama China dengan scene keren", link: "https://manzmodz.blogspot.com/2026/02/cool-scene-drama.html", version: "1.0", hit: 0 },
@@ -425,17 +409,9 @@
                 { name: "Cloudplay", kategori: "Anime", icon: "https://i.ibb.co.com/fYSQKpcJ/20260228-090331.jpg", desc: "Streaming anime & cloud gaming", link: "https://manzmodz.blogspot.com/2026/02/cloudplay.html", version: "1.5.2", hit: 0 },
                 { name: "Donghub", kategori: "Anime", icon: "https://i.ibb.co/FLr01LxG/20260223-174655.jpg", desc: "Nonton anime", link: "https://manzmodz.blogspot.com/2026/02/donghub.html", version: "2.4.8", hit: 0 },
                 { name: "Nonton Anime", kategori: "Anime", icon: "https://i.ibb.co.com/vxDLdKb9/20260223-174528.jpg", desc: "Streaming anime subtitle Indonesia", link: "https://manzmodz.blogspot.com/2026/02/nonton-anime.html", version: "1.0", hit: 0 },
-                // Streaming Drama (5)
-                { name: "IMDb", kategori: "Streaming Drama", icon: "https://i.ibb.co/yz1y1pm/20260223-234842.webp", desc: "Rating film", link: "https://manzmodz.blogspot.com/2026/02/imdb.html", version: "5.2.1", hit: 0 },
-                { name: "LokLok", kategori: "Streaming Drama", icon: "https://i.ibb.co/fYjxmDxc/20260223-174713.jpg", desc: "Streaming drama", link: "https://manzmodz.blogspot.com/2026/02/loklok.html", version: "3.5.2", hit: 0 },
-                { name: "LokTv", kategori: "Streaming Drama", icon: "https://i.ibb.co/DHxcypvj/20260223-174735.webp", desc: "Drama Korea", link: "https://manzmodz.blogspot.com/2026/02/loktv.html", version: "4.0.3", hit: 0 },
-                { name: "MovieBox", kategori: "Streaming Drama", icon: "https://i.ibb.co/ns2GmxRJ/20260223-234822.jpg", desc: "Nonton film", link: "https://manzmodz.blogspot.com/2026/02/moviebox.html", version: "6.2.4", hit: 0 },
-                { name: "WeTv", kategori: "Streaming Drama", icon: "https://i.ibb.co/qFBksgfW/20260223-174752.png", desc: "Drama China & Korea", link: "https://manzmodz.blogspot.com/2026/02/wetv.html", version: "5.8.1", hit: 0 },
                 // Music (2)
                 { name: "Spotify", kategori: "Music", icon: "https://i.ibb.co/Zp6WwVMC/20260223-174518.jpg", desc: "Musik premium", link: "https://manzmodz.blogspot.com/2026/02/spotify.html", version: "8.8.96", hit: 0 },
                 { name: "Spotify Pro", kategori: "Music", icon: "https://i.ibb.co.com/Zp6WwVMC/20260223-174518.jpg", desc: "Spotify versi Pro Lite tanpa iklan", link: "https://manzmodz.blogspot.com/2026/03/spotify-pro.html", version: "Pro Lite", hit: 0 },
-                // Video (1)
-                { name: "YouTube", kategori: "Video", icon: "https://i.ibb.co/3Ypw0dC9/20260225-111542.jpg", desc: "YouTube Premium", link: "https://manzmodz.blogspot.com/2026/02/youtube.html", version: "19.16.39", hit: 0 },
                 // Editing (10)
                 { name: "Alight Motion", kategori: "Editing", icon: "https://i.ibb.co/qLSdDvqk/20260223-143713.jpg", desc: "Motion graphic", link: "https://manzmodz.blogspot.com/2026/02/alight-motion.html", version: "5.0.7", hit: 0 },
                 { name: "CapCut", kategori: "Editing", icon: "https://i.ibb.co/YF9vc86g/20260223-143503.jpg", desc: "Edit video", link: "https://manzmodz.blogspot.com/2026/02/capcut.html", version: "16.9.0", hit: 0 },
@@ -450,8 +426,6 @@
                 // Islami (2)
                 { name: "Muslim Pro", kategori: "Islami", icon: "https://i.ibb.co.com/7tYSshd3/f6d7c304820247fcfd25be1278e72c564e3f2aa8dad8b8f12259ff70b78c3621-200.jpg", desc: "Jadwal sholat, Al-Qur'an", link: "https://manzmodz.blogspot.com/2026/02/muslim-pro.html", version: "12.5.1", hit: 0 },
                 { name: "We Muslim", kategori: "Islami", icon: "https://i.ibb.co.com/0j9gtW4c/6d514ea348745c247231b2de31893db77d2f6f72fce0bd05e12a2a44483eb1f3-200.jpg", desc: "Doa harian, komunitas", link: "https://manzmodz.blogspot.com/2026/02/wemuslim.html", version: "5.2.3", hit: 0 },
-                // VPN (1)
-                { name: "Vpn Super Proxy", kategori: "VPN", icon: "https://i.ibb.co/4wHQT7Qw/10db31b65c8d09ac1d719e49ee891ce8db3179283858330aefcc22c291657b43-200.jpg", desc: "VPN gratis", link: "https://manzmodz.blogspot.com/2026/02/vpn-super-proxy.html", version: "2.8.1", hit: 0 },
                 // Alat (1)
                 { name: "TeraBox", kategori: "Alat", icon: "https://i.ibb.co.com/LdnqbHc1/abfd9d28f21f9f8eee8419e34f4c881c16677c4a2903a466d16033f132c21d44-200.jpg", desc: "Cloud storage gratis kapasitas besar", link: "https://manzmodz.blogspot.com/2026/03/terabox.html", version: "1.0", hit: 0 }
             ];
@@ -487,7 +461,7 @@
                 });
             }
 
-            // Render slider Streaming Drama
+            // Render slider Streaming Drama (kosong karena tidak ada kategori Streaming Drama)
             const sliderGrid = document.getElementById('sliderGrid');
             const streamingApps = apps.filter(app => app.kategori === 'Streaming Drama');
             streamingApps.forEach(app => {
@@ -554,7 +528,7 @@
                 };
                 card.innerHTML = `
                     <div class="app-card-header">
-                        <img src="${app.icon}" alt="${app.name}" class="app-icon" onerror="this.src='https://via.placeholder.com/60?text=Error'">
+                        <img src="${app.icon}" alt="${app.name}" class="app-icon" onerror="this.src='https://via.placeholder.com/55?text=Error'">
                         <div>
                             <div class="app-name">${app.name}</div>
                             <span class="app-category">${app.kategori}</span>
@@ -699,7 +673,7 @@
             }
             tampilkanKomentar();
 
-            // ========== REQUEST APK (dengan tampilan) ==========
+            // ========== REQUEST APK ==========
             document.getElementById('requestForm').addEventListener('submit', function(e) {
                 e.preventDefault();
                 const nama = document.getElementById('requestNama').value.trim();
